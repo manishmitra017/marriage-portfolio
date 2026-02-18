@@ -6,10 +6,11 @@ import OurStory from '@/components/OurStory';
 import GallerySection from '@/components/GallerySection';
 import Footer from '@/components/Footer';
 import {
-  ceremonyPhotos,
-  receptionPhotos,
-  portraitPhotos,
-  preWeddingPhotos,
+  blessingPhotos,
+  couplePhotos,
+  signingPhotos,
+  familyPhotos,
+  feastPhotos,
 } from '@/utils/galleryData';
 
 export default function Home() {
@@ -23,47 +24,58 @@ export default function Home() {
       {/* Our Story timeline */}
       <OurStory />
 
-      {/* Ceremony gallery */}
+      {/* Ashirwad Blessings gallery */}
       <GallerySection
-        id="ceremony"
-        title="The Ceremony"
-        subtitle="Every promise made, every tear of joy — captured forever."
-        emoji="💍"
-        photos={ceremonyPhotos}
+        id="ashirwad-blessings"
+        title="The Blessings"
+        subtitle="One by one, elders placed their hands and hearts — each ashirwad a prayer for forever."
+        emoji="🙏"
+        photos={blessingPhotos}
         columns={3}
         bg="cream"
       />
 
-      {/* Reception gallery */}
+      {/* Couple moments gallery */}
       <GallerySection
-        id="reception"
-        title="The Reception"
-        subtitle="Celebrations, dancing, and memories that will last a lifetime."
-        emoji="🥂"
-        photos={receptionPhotos}
-        columns={3}
+        id="couple"
+        title="Rituparna & Soumya"
+        subtitle="Garlands exchanged, smiles that lit up the room — a love story in every frame."
+        emoji="💐"
+        photos={couplePhotos}
+        columns={2}
         bg="white"
       />
 
-      {/* Portraits gallery */}
+      {/* Signing & formalities */}
       <GallerySection
-        id="portraits"
-        title="Portraits"
-        subtitle="Just the two of them — love in every frame."
-        emoji="🌸"
-        photos={portraitPhotos}
-        columns={2}
+        id="signing"
+        title="The Signing"
+        subtitle="Pen met paper, elders witnessed, and promises were sealed — the formalities of forever."
+        emoji="✍️"
+        photos={signingPhotos}
+        columns={3}
         bg="cream"
       />
 
-      {/* Pre-wedding gallery */}
+      {/* Family gallery */}
       <GallerySection
-        id="pre-wedding"
-        title="Pre-Wedding"
-        subtitle="The story that led to forever."
-        emoji="✨"
-        photos={preWeddingPhotos}
+        id="family"
+        title="Family & Loved Ones"
+        subtitle="Two families became one — surrounded by love, laughter, and blessings."
+        emoji="👨‍👩‍👧‍👦"
+        photos={familyPhotos}
         columns={3}
+        bg="cream"
+      />
+
+      {/* Feast gallery */}
+      <GallerySection
+        id="feast"
+        title="The Feast"
+        subtitle="Biryani, smiles, and celebrations on the terrace — because no Bengali ceremony is complete without good food."
+        emoji="🍛"
+        photos={feastPhotos}
+        columns={2}
         bg="white"
       />
 

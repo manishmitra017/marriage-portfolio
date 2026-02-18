@@ -9,10 +9,11 @@ import ThemeToggle from './ThemeToggle';
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#our-story', label: 'Our Story' },
-  { href: '#ceremony', label: 'Ceremony' },
-  { href: '#reception', label: 'Reception' },
-  { href: '#portraits', label: 'Portraits' },
-  { href: '#pre-wedding', label: 'Pre-Wedding' },
+  { href: '#ashirwad-blessings', label: 'Blessings' },
+  { href: '#couple', label: 'Couple' },
+  { href: '#signing', label: 'Signing' },
+  { href: '#family', label: 'Family' },
+  { href: '#feast', label: 'Feast' },
 ];
 
 export default function Navigation() {
@@ -41,9 +42,14 @@ export default function Navigation() {
         {/* Logo / monogram */}
         <a
           href="#home"
+          onClick={(e) => {
+            e.preventDefault();
+            const el = document.getElementById('home');
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
           className="font-script text-2xl text-blush-600 dark:text-blush-300 hover:text-blush-700 transition-colors"
         >
-          ♡ Forever
+          ♡ R &amp; S
         </a>
 
         {/* Desktop links */}
@@ -52,6 +58,14 @@ export default function Navigation() {
             <li key={link.href}>
               <a
                 href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const id = link.href.replace('#', '');
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
                 className="font-sans text-sm tracking-wide text-[#2d1a24]/70 dark:text-blush-200/70 hover:text-blush-600 dark:hover:text-blush-300 transition-colors"
               >
                 {link.label}
@@ -85,7 +99,18 @@ export default function Navigation() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMenuOpen(false);
+                      const id = link.href.replace('#', '');
+                      // Small delay so the menu closes first
+                      setTimeout(() => {
+                        const el = document.getElementById(id);
+                        if (el) {
+                          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }, 100);
+                    }}
                     className="block font-sans text-sm tracking-wide text-[#2d1a24]/70 dark:text-blush-200/70 hover:text-blush-600 dark:hover:text-blush-300 transition-colors py-1"
                   >
                     {link.label}
