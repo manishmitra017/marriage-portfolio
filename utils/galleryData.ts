@@ -61,7 +61,6 @@ export const couplePhotos: GalleryPhoto[] = [
   img('011', 'Couple in a quiet moment with paperwork', 'A quiet moment with the paperwork'),
   img('015', 'Rituparna candid sitting in purple Banarasi', 'A quiet moment of anticipation'),
   img('033', 'Couple with documents from nice angle', 'The paperwork of promise'),
-  img('042', 'Rituparna candid profile in purple Banarasi', 'A candid profile — Rituparna in her Banarasi'),
   img('044', 'Rituparna and Shoumo with garlands exchanged', 'The garland exchange — two hearts, one promise'),
   img('054', 'Couple smiling wearing garlands', 'Joy after the mala badal'),
   img('062', 'Couple with garlands posing by stairs', 'Standing tall, hearts intertwined'),
