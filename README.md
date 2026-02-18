@@ -1,64 +1,123 @@
-# 💍 Wedding Photo Portfolio
+# Rituparna & Shoumo — Wedding Portfolio
 
-A beautiful, responsive photo gallery website to celebrate a very special wedding day.
+A premium wedding photo portfolio showcasing the Ashirwad ceremony of Rituparna and Shoumo, built with Next.js and deployed on AWS.
 
-Built with the same stack as [my-resume](https://manishmitra.com):
-**Next.js 15 · TypeScript · Tailwind CSS · Framer Motion · AWS CDK · GitHub Actions**
+**Live at [ritusoumya.in](https://ritusoumya.in)**
 
-## Getting Started
+## Features
+
+- **99 curated photos** organized into 5 gallery sections: Blessings, Couple, Signing, Family & Feast
+- **Masonry gallery layout** with CSS columns for natural photo heights
+- **Full-screen hero photos** leading each gallery section
+- **Parallax quote dividers** with Bengali and English text between sections
+- **Interactive lightbox** for full-screen photo viewing
+- **Dark mode** support with theme toggle
+- **Smooth scroll navigation** with active section highlighting and scroll progress bar
+- **Ken Burns animation** on the hero banner
+- **Bengali typography** woven throughout captions and UI
+- **Mobile responsive** with hamburger menu and adaptive layouts
+- **Static export** for fast CDN delivery
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 15 (Static Export) |
+| Language | TypeScript |
+| Styling | Tailwind CSS 3.4 |
+| Animations | Framer Motion 11 |
+| Lightbox | yet-another-react-lightbox |
+| Icons | react-icons (Feather) |
+| Hosting | AWS S3 + CloudFront |
+| DNS | AWS Route 53 |
+| SSL | AWS Certificate Manager |
+| IaC | AWS CDK v2 (TypeScript) |
+| CI/CD | GitHub Actions |
+
+## Development
 
 ```bash
+# Install dependencies
 pnpm install
+
+# Start dev server
 pnpm dev
+
+# Build for production
+pnpm build
+
+# Or use the convenience script
+pnpm run:local
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+The dev server runs at [http://localhost:3000](http://localhost:3000).
 
-## Adding Photos
+## Project Structure
 
-1. Drop photos into `public/images/<category>/` folders:
-   - `public/images/ceremony/`
-   - `public/images/reception/`
-   - `public/images/portraits/`
-   - `public/images/pre-wedding/`
+```
+app/
+  layout.tsx          # Root layout with fonts and metadata
+  page.tsx            # Main page composing all sections
+  globals.css         # Global styles, Ken Burns, scrollbar
 
-2. Register them in `utils/galleryData.ts`:
-   ```ts
-   export const ceremonyPhotos: GalleryPhoto[] = [
-     { src: '/images/ceremony/img1.jpg', alt: 'Exchange of vows', caption: 'The vows' },
-   ];
-   ```
+components/
+  Hero.tsx            # Full-screen photo hero with Ken Burns
+  Navigation.tsx      # Fixed nav with active section tracking
+  ScrollProgress.tsx  # Scroll progress bar
+  OurStory.tsx        # Timeline with milestone cards
+  GallerySection.tsx  # Section wrapper with featured hero photo
+  PhotoGallery.tsx    # Masonry grid with lightbox
+  ParallaxDivider.tsx # Parallax quote dividers
+  SaveTheDate.tsx     # Coming soon card
+  Footer.tsx          # Footer with back-to-top
+  ThemeToggle.tsx     # Dark/light mode switch
 
-3. Done! Run `pnpm dev` to preview.
+hooks/
+  useActiveSection.ts # IntersectionObserver for active nav
 
-## Personalise
+utils/
+  galleryData.ts      # All 99 photos with captions
 
-Edit these files:
-| File | What to change |
-|------|----------------|
-| `components/Hero.tsx` | Names, date, venue, tagline |
-| `components/OurStory.tsx` | Timeline milestones |
-| `app/layout.tsx` | Page title & meta description |
-| `tailwind.config.ts` | Colour palette |
+contexts/
+  ThemeContext.tsx     # Dark mode context
 
-## Deploy to AWS
+cdk/                  # AWS CDK infrastructure
+  lib/wedding-portfolio-stack.ts
+  bin/app.ts
 
-### Prerequisites
-- AWS account with CDK bootstrapped (`npx cdk bootstrap`)
-- Domain name (optional — site works on CloudFront URL without one)
-- ACM certificate in `us-east-1` (if using custom domain)
+public/images/ashirwad/  # 99 ceremony photos
+```
 
-### GitHub Secrets required
-| Secret | Value |
-|--------|-------|
-| `AWS_ACCESS_KEY_ID` | IAM key with CDK deploy permissions |
-| `AWS_SECRET_ACCESS_KEY` | Corresponding secret |
-| `DOMAIN_NAME` | *(optional)* e.g. `ourwedding.com` |
-| `CERTIFICATE_ARN` | *(optional)* ACM cert ARN from `us-east-1` |
+## Gallery Sections
 
-Push to `main` → GitHub Actions builds & deploys automatically.
+| Section | Photos | Description |
+|---------|--------|-------------|
+| The Blessings | 35 | Elders giving ashirwad on the prayer mat |
+| Rituparna & Shoumo | 23 | Couple portraits and garland exchange |
+| The Signing | 17 | Document signing and formalities |
+| Family & Loved Ones | 17 | Group photos and family portraits |
+| The Feast | 7 | Terrace dining and celebration meals |
 
-## Architecture
+## Deployment
+
+The site deploys automatically via GitHub Actions on push to `main`:
+
+1. Builds the Next.js static export
+2. Deploys CDK infrastructure (S3 bucket, CloudFront distribution)
+3. Syncs build output to S3
+4. Invalidates CloudFront cache
+
+### Required GitHub Secrets
+
+| Secret | Description |
+|--------|-------------|
+| `AWS_ACCESS_KEY_ID` | IAM access key with CDK deploy permissions |
+| `AWS_SECRET_ACCESS_KEY` | IAM secret key |
+| `DOMAIN_NAME` | Custom domain (ritusoumya.in) |
+| `HOSTED_ZONE_ID` | Route 53 hosted zone ID |
+| `CERTIFICATE_ARN` | ACM certificate ARN (us-east-1) |
+
+### Architecture
 
 ```
 GitHub push → GitHub Actions
@@ -67,3 +126,7 @@ GitHub push → GitHub Actions
   ├─ S3 sync     →  upload /out to bucket
   └─ CF invalidation → clear CDN cache
 ```
+
+## License
+
+All rights reserved. Photos and content are personal and not for redistribution.
