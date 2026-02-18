@@ -7,10 +7,10 @@
 #  AWS_ACCESS_KEY_ID       IAM user access key  (needs permissions below)
 #  AWS_SECRET_ACCESS_KEY   IAM user secret key
 #
-# ── Custom domain secrets (ritusoumya.in — already provisioned via CLI) ──────
-#  DOMAIN_NAME             ritusoumya.in
-#  HOSTED_ZONE_ID          Z098785517SEI90XXWOJF
-#  CERTIFICATE_ARN         arn:aws:acm:us-east-1:147845228831:certificate/3b6f614b-c5de-49de-9cd3-e87210da7972
+# ── Custom domain secrets ────────────────────────────────────────────────────
+#  DOMAIN_NAME             e.g. ritusoumya.in
+#  HOSTED_ZONE_ID          Route53 hosted zone ID for the domain
+#  CERTIFICATE_ARN         ACM certificate ARN (must be in us-east-1)
 #
 # ── IAM permissions the AWS user needs ──────────────────────────────────────
 #  S3        : s3:PutObject, s3:GetObject, s3:DeleteObject, s3:ListBucket
