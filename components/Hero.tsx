@@ -16,7 +16,7 @@ export default function Hero() {
           src="/images/ashirwad/ashirwad_111.jpg"
           alt="Rituparna & Shoumo standing together with garlands, beaming with joy"
           fill
-          className="object-cover animate-ken-burns"
+          className="object-cover object-center md:object-[center_25%] animate-ken-burns"
           priority
           sizes="100vw"
         />
