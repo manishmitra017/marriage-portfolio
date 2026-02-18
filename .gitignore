@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+cdk/node_modules/
+
+# Next.js
+.next/
+out/
+
+# CDK
+cdk/dist/
+cdk/cdk.out/
+cdk/*.js
+cdk/bin/*.js
+cdk/lib/*.js
+!cdk/jest.config.js
+
+# Environment
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
