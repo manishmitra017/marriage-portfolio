@@ -41,6 +41,24 @@ body {
   background: #cc2b5e;
 }
 
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1a0f14;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #7b1b3e;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #ac1d4c;
+}
+
+/* iOS parallax fallback */
+@supports (-webkit-touch-callout: none) {
+  .bg-fixed {
+    background-attachment: scroll !important;
+  }
+}
+
 /* Selection */
 ::selection {
   background: rgba(244, 168, 192, 0.4);
