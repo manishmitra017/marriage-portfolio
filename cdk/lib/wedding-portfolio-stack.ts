@@ -19,13 +19,7 @@ export class WeddingPortfolioStack extends cdk.Stack {
     const domainName = props?.domainName;
     const wwwDomainName = domainName ? `www.${domainName}` : undefined;
 
-    // Import ACM Certificate from us-east-1 (must exist before deploy)
-    const certificate =
-      props?.certificateArn && props.certificateArn.length > 0
-        ? acm.Certificate.fromCertificateArn(this, 'ImportedCertificate', props.certificateArn)
-        : undefined;
-
-    // S3 bucket — private, accessed only via CloudFront OAC
+    // ── S3 bucket — private, served only via CloudFront OAC ─────────────────
     const websiteBucket = new s3.Bucket(this, 'WeddingPortfolioBucket', {
       bucketName: `wedding-portfolio-static-${this.account}`,
       publicReadAccess: false,
@@ -35,7 +29,7 @@ export class WeddingPortfolioStack extends cdk.Stack {
       versioned: false,
     });
 
-    // CloudFront Function — rewrites /path/ → /path/index.html
+    // ── CloudFront Function — rewrites clean URLs to index.html ─────────────
     const urlRewriteFunction = new cloudfront.Function(this, 'UrlRewriteFunction', {
       code: cloudfront.FunctionCode.fromInline(`
 function handler(event) {
@@ -50,10 +44,37 @@ function handler(event) {
 }
       `),
       functionName: 'WeddingPortfolioUrlRewrite',
-      comment: 'URL rewrite for Next.js static export — appends index.html',
+      comment: 'URL rewrite for Next.js static export',
     });
 
-    // CloudFront distribution
+    // ── Route53 hosted zone — created as soon as domainName is set ──────────
+    // This allows NS records to be retrieved and set at the registrar
+    // BEFORE the ACM certificate is created.
+    let hostedZone: route53.PublicHostedZone | undefined;
+    if (domainName) {
+      hostedZone = new route53.PublicHostedZone(this, 'WeddingHostedZone', {
+        zoneName: domainName,
+        comment: 'Hosted zone for ritusoumya.in',
+      });
+
+      new cdk.CfnOutput(this, 'NameServers', {
+        value: cdk.Fn.join(', ', hostedZone.hostedZoneNameServers || []),
+        description: 'Set these NS records at your domain registrar (e.g. GoDaddy)',
+      });
+
+      new cdk.CfnOutput(this, 'HostedZoneId', {
+        value: hostedZone.hostedZoneId,
+        description: 'Route53 Hosted Zone ID',
+      });
+    }
+
+    // ── ACM certificate — imported once CERTIFICATE_ARN secret is set ───────
+    const certificate =
+      props?.certificateArn && props.certificateArn.length > 0
+        ? acm.Certificate.fromCertificateArn(this, 'Certificate', props.certificateArn)
+        : undefined;
+
+    // ── CloudFront distribution ──────────────────────────────────────────────
     const distribution = new cloudfront.Distribution(this, 'WeddingPortfolioDistribution', {
       defaultBehavior: {
         origin: origins.S3BucketOrigin.withOriginAccessControl(websiteBucket),
@@ -69,8 +90,9 @@ function handler(event) {
           },
         ],
       },
-      domainNames:
-        certificate && domainName && wwwDomainName ? [domainName, wwwDomainName] : undefined,
+      domainNames: certificate && domainName && wwwDomainName
+        ? [domainName, wwwDomainName]
+        : undefined,
       certificate,
       defaultRootObject: 'index.html',
       errorResponses: [
@@ -91,57 +113,42 @@ function handler(event) {
       minimumProtocolVersion: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2021,
     });
 
-    // Route53 records — only when a custom domain + cert is configured
-    if (certificate && domainName && wwwDomainName) {
-      const hostedZone = new route53.PublicHostedZone(this, 'WeddingHostedZone', {
-        zoneName: domainName,
-        comment: 'Hosted zone for wedding portfolio',
-      });
-
-      new route53.ARecord(this, 'WeddingAliasRecord', {
+    // ── Route53 A records — added once cert is attached ─────────────────────
+    if (certificate && hostedZone && domainName && wwwDomainName) {
+      new route53.ARecord(this, 'RootAliasRecord', {
         zone: hostedZone,
         recordName: domainName,
         target: route53.RecordTarget.fromAlias(new targets.CloudFrontTarget(distribution)),
       });
 
-      new route53.ARecord(this, 'WeddingWwwAliasRecord', {
+      new route53.ARecord(this, 'WwwAliasRecord', {
         zone: hostedZone,
         recordName: wwwDomainName,
         target: route53.RecordTarget.fromAlias(new targets.CloudFrontTarget(distribution)),
       });
 
-      new cdk.CfnOutput(this, 'HostedZoneId', {
-        value: hostedZone.hostedZoneId,
-        description: 'Route53 Hosted Zone ID',
-      });
-
-      new cdk.CfnOutput(this, 'NameServers', {
-        value: cdk.Fn.join(', ', hostedZone.hostedZoneNameServers || []),
-        description: 'Update these at your domain registrar',
-      });
-
       new cdk.CfnOutput(this, 'WebsiteURL', {
         value: `https://${domainName}`,
-        description: 'Wedding Portfolio Website URL',
+        description: 'Live website URL',
       });
     }
 
-    // Outputs used by GitHub Actions
+    // ── Outputs used by GitHub Actions pipeline ──────────────────────────────
     new cdk.CfnOutput(this, 'BucketName', {
       value: websiteBucket.bucketName,
-      description: 'S3 Bucket Name for GitHub Actions S3 sync',
+      description: 'S3 bucket name for S3 sync',
       exportName: 'WeddingPortfolioBucketName',
     });
 
     new cdk.CfnOutput(this, 'DistributionId', {
       value: distribution.distributionId,
-      description: 'CloudFront Distribution ID for cache invalidation',
+      description: 'CloudFront distribution ID for cache invalidation',
       exportName: 'WeddingPortfolioDistributionId',
     });
 
     new cdk.CfnOutput(this, 'CloudFrontURL', {
       value: `https://${distribution.distributionDomainName}`,
-      description: 'CloudFront Distribution URL (always available)',
+      description: 'CloudFront URL (always available, pre-custom domain)',
     });
   }
 }
