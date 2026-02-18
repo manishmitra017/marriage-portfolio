@@ -19,7 +19,7 @@ export default function ParallaxDivider({
     <div className="relative h-[50vh] md:h-[60vh] overflow-hidden flex items-center justify-center">
       {/* Fixed background image — parallax on desktop, static on iOS */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed"
         style={{ backgroundImage: `url(${imageSrc})` }}
       />
       {/* Dark overlay */}
