@@ -23,7 +23,7 @@ export default function Hero() {
       </div>
 
       {/* Dark gradient overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
       {/* Subtle vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.3)_100%)]" />
@@ -47,7 +47,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4 }}
-          className="font-script text-6xl md:text-8xl lg:text-9xl text-white mb-4 leading-tight drop-shadow-lg"
+          className="font-script text-6xl md:text-8xl lg:text-9xl text-white mb-4 leading-tight [text-shadow:_0_2px_12px_rgba(0,0,0,0.7),_0_1px_4px_rgba(0,0,0,0.5)]"
         >
           Rituparna & Shoumo
         </motion.h1>
@@ -57,7 +57,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="font-serif text-xl md:text-2xl text-white/70 tracking-wide mb-6"
+          className="font-serif text-xl md:text-2xl text-white/90 tracking-wide mb-6 [text-shadow:_0_1px_8px_rgba(0,0,0,0.6)]"
         >
           A Journey That Began with Ashirwad
         </motion.p>
@@ -67,7 +67,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-sm font-sans tracking-[0.2em] uppercase text-white/50 mb-14"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-sm font-sans tracking-[0.2em] uppercase text-white/70 mb-14 [text-shadow:_0_1px_6px_rgba(0,0,0,0.5)]"
         >
           <span>Wedding Coming Soon</span>
           <span className="hidden sm:block text-champagne-400/60">&#x2726;</span>
