@@ -38,7 +38,7 @@ export default function Home() {
       {/* Couple moments gallery */}
       <GallerySection
         id="couple"
-        title="Rituparna & Soumya"
+        title="Rituparna & Shoumo"
         subtitle="Garlands exchanged, smiles that lit up the room — a love story in every frame."
         emoji="💐"
         photos={couplePhotos}

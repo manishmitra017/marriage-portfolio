@@ -8,28 +8,28 @@ const milestones = [
     year: 'The Ashirwad',
     title: 'Blessings from Elders',
     description:
-      'The Ashirwad ceremony brought both families together under one roof in Kolkata. One by one, elders placed their hands on Rituparna and Soumya\'s heads, offering blessings, feeding them sweets, and showering them with love and good wishes for the journey ahead.',
+      'The Ashirwad ceremony brought both families together under one roof in Kolkata. One by one, elders placed their hands on Rituparna and Shoumo\'s heads, offering blessings, feeding them sweets, and showering them with love and good wishes for the journey ahead.',
     icon: '🙏',
   },
   {
     year: 'The Rituals',
     title: 'Sacred Traditions',
     description:
-      'Seated on a beautifully laid carpet with a brass thali, lit diya, and sacred durba grass, Rituparna and Soumya received ashirwad from Babai, Ma, KumKum Ma, Kaki, Meson Mama, and many more — each blessing carrying decades of love and wisdom.',
+      'Seated on a beautifully laid carpet with a brass thali, lit diya, and sacred durba grass, Rituparna and Shoumo received ashirwad from Babai, Ma, KumKum Ma, Kaki, Meson Mama, and many more — each blessing carrying decades of love and wisdom.',
     icon: '🪔',
   },
   {
     year: 'The Promise',
     title: 'Garlands & Commitment',
     description:
-      'The highlight of the evening — Rituparna in her stunning purple Banarasi and Soumya in his red kurta exchanged flower garlands, sealing their promise with beaming smiles. The house filled with joy as two families became one.',
+      'The highlight of the evening — Rituparna in her stunning purple Banarasi and Shoumo in his red kurta exchanged flower garlands, sealing their promise with beaming smiles. The house filled with joy as two families became one.',
     icon: '💐',
   },
   {
     year: 'Coming Soon',
     title: 'The Wedding',
     description:
-      'The Ashirwad was just the beautiful beginning. The wedding celebrations are on the horizon, and the best is yet to come. Stay tuned for the next chapter of Rituparna and Soumya\'s love story.',
+      'The Ashirwad was just the beautiful beginning. The wedding celebrations are on the horizon, and the best is yet to come. Stay tuned for the next chapter of Rituparna and Shoumo\'s love story.',
     icon: '💍',
   },
 ];

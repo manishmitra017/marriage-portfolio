@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FiHeart, FiCamera } from 'react-icons/fi';
 
 const WEDDING_DATE = 'Wedding Coming Soon';
-const COUPLE_NAMES = 'Rituparna & Soumya';
+const COUPLE_NAMES = 'Rituparna & Shoumo';
 const TAGLINE = 'A Journey That Began with Ashirwad';
 const VENUE = 'Kolkata';
 
