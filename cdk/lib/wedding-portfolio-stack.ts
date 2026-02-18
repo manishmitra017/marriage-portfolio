@@ -9,6 +9,7 @@ import { Construct } from 'constructs';
 
 export interface WeddingPortfolioStackProps extends cdk.StackProps {
   domainName?: string;
+  hostedZoneId?: string;
   certificateArn?: string;
 }
 
@@ -47,24 +48,12 @@ function handler(event) {
       comment: 'URL rewrite for Next.js static export',
     });
 
-    // ── Route53 hosted zone — created as soon as domainName is set ──────────
-    // This allows NS records to be retrieved and set at the registrar
-    // BEFORE the ACM certificate is created.
-    let hostedZone: route53.PublicHostedZone | undefined;
-    if (domainName) {
-      hostedZone = new route53.PublicHostedZone(this, 'WeddingHostedZone', {
+    // ── Route53 hosted zone — imported (already created via CLI) ────────────
+    let hostedZone: route53.IHostedZone | undefined;
+    if (domainName && props?.hostedZoneId) {
+      hostedZone = route53.HostedZone.fromHostedZoneAttributes(this, 'WeddingHostedZone', {
+        hostedZoneId: props.hostedZoneId,
         zoneName: domainName,
-        comment: 'Hosted zone for ritusoumya.in',
-      });
-
-      new cdk.CfnOutput(this, 'NameServers', {
-        value: cdk.Fn.join(', ', hostedZone.hostedZoneNameServers || []),
-        description: 'Set these NS records at your domain registrar (e.g. GoDaddy)',
-      });
-
-      new cdk.CfnOutput(this, 'HostedZoneId', {
-        value: hostedZone.hostedZoneId,
-        description: 'Route53 Hosted Zone ID',
       });
     }
 
@@ -113,7 +102,7 @@ function handler(event) {
       minimumProtocolVersion: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2021,
     });
 
-    // ── Route53 A records — added once cert is attached ─────────────────────
+    // ── Route53 A records — added once cert + hosted zone are both present ───
     if (certificate && hostedZone && domainName && wwwDomainName) {
       new route53.ARecord(this, 'RootAliasRecord', {
         zone: hostedZone,
@@ -148,7 +137,7 @@ function handler(event) {
 
     new cdk.CfnOutput(this, 'CloudFrontURL', {
       value: `https://${distribution.distributionDomainName}`,
-      description: 'CloudFront URL (always available, pre-custom domain)',
+      description: 'CloudFront URL (always available)',
     });
   }
 }

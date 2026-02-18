@@ -7,9 +7,10 @@
 #  AWS_ACCESS_KEY_ID       IAM user access key  (needs permissions below)
 #  AWS_SECRET_ACCESS_KEY   IAM user secret key
 #
-# ── Optional GitHub Secrets (only needed if using a custom domain) ───────────
-#  DOMAIN_NAME             e.g. ourwedding.com
-#  CERTIFICATE_ARN         ACM cert ARN in us-east-1 for the domain above
+# ── Custom domain secrets (ritusoumya.in — already provisioned via CLI) ──────
+#  DOMAIN_NAME             ritusoumya.in
+#  HOSTED_ZONE_ID          Z0789766JNX1QPU75C6W
+#  CERTIFICATE_ARN         arn:aws:acm:us-east-1:147845228831:certificate/3b6f614b-c5de-49de-9cd3-e87210da7972
 #
 # ── IAM permissions the AWS user needs ──────────────────────────────────────
 #  S3        : s3:PutObject, s3:GetObject, s3:DeleteObject, s3:ListBucket
@@ -83,6 +84,7 @@ jobs:
         run: npx cdk deploy --require-approval never --outputs-file outputs.json
         env:
           DOMAIN_NAME: ${{ secrets.DOMAIN_NAME }}
+          HOSTED_ZONE_ID: ${{ secrets.HOSTED_ZONE_ID }}
           CERTIFICATE_ARN: ${{ secrets.CERTIFICATE_ARN }}
 
       - name: Read stack outputs

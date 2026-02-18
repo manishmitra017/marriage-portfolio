@@ -7,6 +7,7 @@ const app = new cdk.App();
 
 const account = process.env.CDK_DEFAULT_ACCOUNT || '147845228831';
 const domainName = process.env.DOMAIN_NAME || '';
+const hostedZoneId = process.env.HOSTED_ZONE_ID || '';
 const certificateArn = process.env.CERTIFICATE_ARN || '';
 
 new WeddingPortfolioStack(app, 'WeddingPortfolioStack', {
@@ -16,6 +17,7 @@ new WeddingPortfolioStack(app, 'WeddingPortfolioStack', {
   },
   crossRegionReferences: true,
   domainName: domainName || undefined,
+  hostedZoneId: hostedZoneId || undefined,
   certificateArn: certificateArn || undefined,
   description: 'Wedding Photo Portfolio — S3 + CloudFront Static Website',
   tags: {
