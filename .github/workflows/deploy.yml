@@ -9,7 +9,7 @@
 #
 # ── Custom domain secrets (ritusoumya.in — already provisioned via CLI) ──────
 #  DOMAIN_NAME             ritusoumya.in
-#  HOSTED_ZONE_ID          Z0789766JNX1QPU75C6W
+#  HOSTED_ZONE_ID          Z098785517SEI90XXWOJF
 #  CERTIFICATE_ARN         arn:aws:acm:us-east-1:147845228831:certificate/3b6f614b-c5de-49de-9cd3-e87210da7972
 #
 # ── IAM permissions the AWS user needs ──────────────────────────────────────
