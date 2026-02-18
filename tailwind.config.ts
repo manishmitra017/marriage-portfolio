@@ -61,6 +61,7 @@ const config: Config = {
         'slide-up': 'slideUp 0.7s ease-out forwards',
         'float': 'float 6s ease-in-out infinite',
         'petal-fall': 'petalFall 8s ease-in infinite',
+        'ken-burns': 'kenBurns 25s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -78,6 +79,10 @@ const config: Config = {
         petalFall: {
           '0%': { transform: 'translateY(-20px) rotate(0deg)', opacity: '1' },
           '100%': { transform: 'translateY(100vh) rotate(720deg)', opacity: '0' },
+        },
+        kenBurns: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.08)' },
         },
       },
       backgroundImage: {
