@@ -3,11 +3,10 @@
 import { motion } from 'framer-motion';
 import { FiHeart, FiCamera } from 'react-icons/fi';
 
-// TODO: Update these with actual wedding details
-const WEDDING_DATE = 'February 14, 2025';
-const COUPLE_NAMES = 'Your Sister & Partner';
-const TAGLINE = 'A Love Story Written in Forever';
-const VENUE = 'Your Beautiful Venue';
+const WEDDING_DATE = 'Wedding Coming Soon';
+const COUPLE_NAMES = 'Rituparna & Soumya';
+const TAGLINE = 'A Journey That Began with Ashirwad';
+const VENUE = 'Kolkata';
 
 export default function Hero() {
   return (
@@ -75,7 +74,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#ceremony"
+            href="#ashirwad-blessings"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-blush-600 hover:bg-blush-700 text-white rounded-full font-sans text-sm tracking-wide transition-all duration-200 shadow-soft hover:shadow-glow"
           >
             <FiCamera size={16} />

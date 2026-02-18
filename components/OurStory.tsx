@@ -3,32 +3,34 @@
 import { motion } from 'framer-motion';
 import { FiHeart } from 'react-icons/fi';
 
-// TODO: Update with real story milestones
 const milestones = [
   {
-    year: '2020',
-    title: 'How We Met',
+    year: 'The Ashirwad',
+    title: 'Blessings from Elders',
     description:
-      'Every great love story has a beginning. This is where ours started — fill in the details here.',
-    icon: '💫',
+      'The Ashirwad ceremony brought both families together under one roof in Kolkata. One by one, elders placed their hands on Rituparna and Soumya\'s heads, offering blessings, feeding them sweets, and showering them with love and good wishes for the journey ahead.',
+    icon: '🙏',
   },
   {
-    year: '2021',
-    title: 'First Date',
-    description: 'The date that changed everything. Add the story of your first official date.',
-    icon: '🌹',
+    year: 'The Rituals',
+    title: 'Sacred Traditions',
+    description:
+      'Seated on a beautifully laid carpet with a brass thali, lit diya, and sacred durba grass, Rituparna and Soumya received ashirwad from Babai, Ma, KumKum Ma, Kaki, Meson Mama, and many more — each blessing carrying decades of love and wisdom.',
+    icon: '🪔',
   },
   {
-    year: '2023',
-    title: 'The Proposal',
-    description: 'The moment that made forever official. Share the proposal story here.',
+    year: 'The Promise',
+    title: 'Garlands & Commitment',
+    description:
+      'The highlight of the evening — Rituparna in her stunning purple Banarasi and Soumya in his red kurta exchanged flower garlands, sealing their promise with beaming smiles. The house filled with joy as two families became one.',
+    icon: '💐',
+  },
+  {
+    year: 'Coming Soon',
+    title: 'The Wedding',
+    description:
+      'The Ashirwad was just the beautiful beginning. The wedding celebrations are on the horizon, and the best is yet to come. Stay tuned for the next chapter of Rituparna and Soumya\'s love story.',
     icon: '💍',
-  },
-  {
-    year: '2025',
-    title: 'Our Wedding Day',
-    description: 'The day we said "I do" surrounded by everyone we love.',
-    icon: '👰',
   },
 ];
 

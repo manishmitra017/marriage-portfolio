@@ -1,5 +1,23 @@
-# Wedding Portfolio Deploy — S3 + CloudFront via AWS CDK
-# Security note: This workflow uses only secrets.* and steps.outputs — no untrusted user input.
+# Wedding Portfolio — Deploy to AWS (S3 + CloudFront via CDK)
+#
+# Trigger : push to main  |  manual workflow_dispatch
+# Flow    : build Next.js → CDK deploy infra → S3 sync → CF invalidation
+#
+# ── Required GitHub Secrets ──────────────────────────────────────────────────
+#  AWS_ACCESS_KEY_ID       IAM user access key  (needs permissions below)
+#  AWS_SECRET_ACCESS_KEY   IAM user secret key
+#
+# ── Optional GitHub Secrets (only needed if using a custom domain) ───────────
+#  DOMAIN_NAME             e.g. ourwedding.com
+#  CERTIFICATE_ARN         ACM cert ARN in us-east-1 for the domain above
+#
+# ── IAM permissions the AWS user needs ──────────────────────────────────────
+#  S3        : s3:PutObject, s3:GetObject, s3:DeleteObject, s3:ListBucket
+#  CloudFront: cloudfront:CreateInvalidation, cloudfront:GetDistribution
+#  CDK/CFN   : cloudformation:*, iam:* (for OAC role), s3:CreateBucket,
+#              cloudfront:*, acm:DescribeCertificate (broad for CDK bootstrap)
+# ─────────────────────────────────────────────────────────────────────────────
+
 name: Deploy Wedding Portfolio to AWS
 
 on:
@@ -60,34 +78,47 @@ jobs:
         working-directory: ./cdk
         run: npm run build
 
-      - name: Deploy CDK Stack
+      - name: Deploy CDK stack
         working-directory: ./cdk
         run: npx cdk deploy --require-approval never --outputs-file outputs.json
         env:
           DOMAIN_NAME: ${{ secrets.DOMAIN_NAME }}
           CERTIFICATE_ARN: ${{ secrets.CERTIFICATE_ARN }}
 
-      - name: Get Stack Outputs
+      - name: Read stack outputs
         id: stack-outputs
         working-directory: ./cdk
         run: |
-          BUCKET_NAME=$(cat outputs.json | grep -o '"BucketName": "[^"]*"' | cut -d'"' -f4)
-          DISTRIBUTION_ID=$(cat outputs.json | grep -o '"DistributionId": "[^"]*"' | cut -d'"' -f4)
+          BUCKET_NAME=$(jq -r '.WeddingPortfolioStack.BucketName' outputs.json)
+          DISTRIBUTION_ID=$(jq -r '.WeddingPortfolioStack.DistributionId' outputs.json)
           echo "bucket_name=$BUCKET_NAME" >> $GITHUB_OUTPUT
           echo "distribution_id=$DISTRIBUTION_ID" >> $GITHUB_OUTPUT
+          echo "Bucket         : $BUCKET_NAME"
+          echo "Distribution   : $DISTRIBUTION_ID"
 
-      - name: Sync static site to S3
+      - name: Sync site to S3
         env:
           BUCKET: ${{ steps.stack-outputs.outputs.bucket_name }}
-        run: aws s3 sync out/ "s3://$BUCKET" --delete --cache-control "public, max-age=3600"
+        run: |
+          # Syncs everything: HTML, JS, CSS, and photos under images/.
+          # --delete removes stale files from S3.
+          # --exact-timestamps skips unchanged files (fast for large photo sets).
+          aws s3 sync out/ "s3://$BUCKET" \
+            --delete \
+            --exact-timestamps \
+            --cache-control "public, max-age=3600"
 
       - name: Invalidate CloudFront cache
         if: steps.stack-outputs.outputs.distribution_id != ''
         env:
           DIST_ID: ${{ steps.stack-outputs.outputs.distribution_id }}
-        run: aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*" --no-cli-pager
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "$DIST_ID" \
+            --paths "/*" \
+            --no-cli-pager
 
-      - name: Upload deployment outputs
+      - name: Save CDK outputs as artifact
         uses: actions/upload-artifact@v4
         with:
           name: cdk-outputs

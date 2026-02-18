@@ -24,13 +24,13 @@ const dancing = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: 'Our Wedding — A Love Story',
+  title: 'Rituparna & Soumya — Ashirwad Ceremony',
   description:
-    'A beautiful collection of moments from our wedding day. Explore our ceremony, reception, portraits, and pre-wedding memories.',
-  keywords: ['wedding', 'marriage', 'photo gallery', 'love story', 'wedding photos'],
+    'A beautiful collection of moments from Rituparna Guha & Soumya Ghosh\'s Ashirwad ceremony in Kolkata. Blessings, garlands, family, and celebrations.',
+  keywords: ['wedding', 'ashirwad', 'rituparna', 'soumya', 'bengali wedding', 'kolkata'],
   openGraph: {
-    title: 'Our Wedding — A Love Story',
-    description: 'Celebrating our special day — a gallery of cherished memories.',
+    title: 'Rituparna & Soumya — Ashirwad Ceremony',
+    description: 'The Ashirwad ceremony — blessings, love, and the beginning of forever.',
     type: 'website',
   },
 };
