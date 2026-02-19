@@ -75,6 +75,11 @@ body {
   background: rgba(26, 15, 20, 0.95) !important;
 }
 
+/* Scroll offset for fixed nav */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
