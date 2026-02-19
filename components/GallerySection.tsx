@@ -71,7 +71,7 @@ export default function GallerySection({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1.0] }}
-            className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-2xl mb-8 cursor-pointer group"
+            className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-2xl mb-8 cursor-pointer group"
             onClick={() => setLightboxIndex(0)}
           >
             <Image
@@ -81,7 +81,7 @@ export default function GallerySection({
               className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
               {heroPhoto.caption && (
                 <p className="absolute bottom-5 left-6 right-6 font-serif text-sm text-white/90">
                   {heroPhoto.caption}
