@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "ea9052424162",
+  "strategy": "manual-commit",
+  "branch": "fix/hero-image-and-design-polish",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "components/GallerySection.tsx",
+    "components/PhotoGallery.tsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/ea/9052424162/0/metadata.json",
+      "transcript": "/ea/9052424162/0/full.jsonl",
+      "context": "/ea/9052424162/0/context.md",
+      "content_hash": "/ea/9052424162/0/content_hash.txt",
+      "prompt": "/ea/9052424162/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 21,
+    "cache_creation_tokens": 12739,
+    "cache_read_tokens": 1256514,
+    "output_tokens": 164,
+    "api_call_count": 15
+  }
+}
