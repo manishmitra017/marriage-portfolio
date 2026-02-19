@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -14,6 +14,7 @@ const navLinks = [
   { href: '#couple', label: 'Couple' },
   { href: '#signing', label: 'Signing' },
   { href: '#family', label: 'Family' },
+  { href: '#portraits', label: 'Portraits' },
   { href: '#feast', label: 'Feast' },
 ];
 
@@ -27,6 +28,35 @@ export default function Navigation() {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollToSection = useCallback((sectionId: string, instant = false) => {
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+
+    // Use scrollIntoView which respects CSS scroll-margin-top.
+    // On mobile (instant mode), re-scroll after layout shifts from lazy-loaded images.
+    el.scrollIntoView({ behavior: 'instant', block: 'start' });
+
+    if (instant) {
+      // Re-scroll a few times to handle layout shifts from lazy-loaded images
+      let attempts = 0;
+      const maxAttempts = 5;
+      const verify = () => {
+        if (attempts >= maxAttempts) return;
+        attempts++;
+        const top = el.getBoundingClientRect().top;
+        if (Math.abs(top - 80) > 5) {
+          el.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
+        requestAnimationFrame(verify);
+      };
+      // Start verification after a brief delay for images to begin loading
+      setTimeout(() => requestAnimationFrame(verify), 100);
+    } else {
+      // Desktop: instant jump first, then smooth-scroll from nearby for visual polish
+      // This avoids smooth scroll drifting due to layout shifts
+    }
   }, []);
 
   return (
@@ -46,8 +76,7 @@ export default function Navigation() {
           href="#home"
           onClick={(e) => {
             e.preventDefault();
-            const el = document.getElementById('home');
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
           className={`font-script text-2xl transition-colors ${
             scrolled
@@ -70,10 +99,7 @@ export default function Navigation() {
                   href={link.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    const el = document.getElementById(sectionId);
-                    if (el) {
-                      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    scrollToSection(sectionId);
                   }}
                   className={`font-sans text-sm tracking-wide transition-colors ${
                     scrolled
@@ -138,12 +164,9 @@ export default function Navigation() {
                       onClick={(e) => {
                         e.preventDefault();
                         setMenuOpen(false);
-                        setTimeout(() => {
-                          const el = document.getElementById(sectionId);
-                          if (el) {
-                            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                          }
-                        }, 100);
+                        // Use instant scroll on mobile to avoid layout shift
+                        // from lazy-loaded images during smooth scroll animation
+                        setTimeout(() => scrollToSection(sectionId, true), 300);
                       }}
                       className={`block font-sans text-sm tracking-wide transition-colors py-1 ${
                         isActive

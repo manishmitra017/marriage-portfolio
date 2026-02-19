@@ -74,15 +74,8 @@ export default function PhotoGallery({
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
             {/* Hover overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2d1a24]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-              <div className="flex items-center justify-between w-full">
-                {photo.caption && (
-                  <p className="font-serif text-xs text-white/90 leading-snug max-w-[80%]">
-                    {photo.caption}
-                  </p>
-                )}
-                <FiMaximize2 className="text-white/70 ml-auto flex-shrink-0" size={14} />
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#2d1a24]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
+              <FiMaximize2 className="text-white/70 flex-shrink-0" size={14} />
             </div>
           </motion.div>
         ))}

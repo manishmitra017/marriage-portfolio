@@ -130,6 +130,14 @@ export const feastPhotos: GalleryPhoto[] = [
   img('229', 'Women seated together eating under the tent at the celebration', 'খাওয়া-দাওয়া আর আড্ডা — good food, great company, the best memories'),
 ];
 
+// ── Section 6: Rituparna — Portraits (4 photos) ──────────────────────────────
+export const portraitSectionPhotos: GalleryPhoto[] = [
+  { src: '/images/portraits/rituparna_001.jpg', alt: 'Rituparna smiling at the camera in her purple Banarasi with a pink flower in her hair', caption: '' },
+  { src: '/images/portraits/rituparna_002.jpg', alt: 'Rituparna looking down gracefully in her purple Banarasi with gold jewelry', caption: '' },
+  { src: '/images/portraits/rituparna_003.jpg', alt: 'Rituparna smiling softly with eyes downcast, pink flower and gold necklace', caption: '' },
+  { src: '/images/portraits/rituparna_004.jpg', alt: 'Rituparna in a candid moment, gentle smile in her purple Banarasi', caption: '' },
+];
+
 // Legacy exports for backward compatibility
 export const ceremonyPhotos = blessingPhotos;
 export const receptionPhotos = couplePhotos;
