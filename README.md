@@ -6,7 +6,7 @@ A premium wedding photo portfolio showcasing the Ashirwad ceremony of Rituparna 
 
 ## Features
 
-- **99 curated photos** organized into 5 gallery sections: Blessings, Couple, Signing, Family & Feast
+- **103 curated photos** organized into 6 gallery sections
 - **Masonry gallery layout** with CSS columns for natural photo heights
 - **Full-screen hero photos** leading each gallery section
 - **Parallax quote dividers** with Bengali and English text between sections
@@ -16,7 +16,44 @@ A premium wedding photo portfolio showcasing the Ashirwad ceremony of Rituparna 
 - **Ken Burns animation** on the hero banner
 - **Bengali typography** woven throughout captions and UI
 - **Mobile responsive** with hamburger menu and adaptive layouts
+- **Auto-generated galleries** — drop photos into folders, the build handles the rest
 - **Static export** for fast CDN delivery
+
+## Adding & Removing Photos
+
+Photos are organized into folders under `public/images/`. To update the gallery:
+
+1. **Add a photo** — Drop it into the right folder (e.g. `public/images/blessings/`)
+2. **Remove a photo** — Delete the file from the folder
+3. **Set alt text / caption** (optional) — Edit `_captions.json` in that folder
+
+No code changes needed. The build script (`scripts/generate-gallery.mjs`) scans the folders and auto-generates the gallery data.
+
+### Photo Folders
+
+```
+public/images/
+├── blessings/     # Elders giving ashirwad on the prayer mat
+├── couple/        # Couple portraits and garland exchange
+├── signing/       # Document signing and formalities
+├── family/        # Group photos and family portraits
+├── portraits/     # Rituparna portrait photos
+├── feast/         # Terrace dining and celebration meals
+└── ashirwad/unused/  # Archive of unused photos
+```
+
+### Caption Format (`_captions.json`)
+
+Each folder can have an optional `_captions.json` file. Photos listed here appear in this order; new photos not listed are appended alphabetically.
+
+```json
+{
+  "photo_filename.jpg": {
+    "alt": "Description for accessibility",
+    "caption": "Caption shown on hover"
+  }
+}
+```
 
 ## Tech Stack
 
@@ -40,11 +77,14 @@ A premium wedding photo portfolio showcasing the Ashirwad ceremony of Rituparna 
 # Install dependencies
 pnpm install
 
-# Start dev server
+# Start dev server (auto-generates gallery data)
 pnpm dev
 
-# Build for production
+# Build for production (auto-generates gallery data)
 pnpm build
+
+# Regenerate gallery data manually
+node scripts/generate-gallery.mjs
 
 # Or use the convenience script
 pnpm run:local
@@ -76,16 +116,19 @@ hooks/
   useActiveSection.ts # IntersectionObserver for active nav
 
 utils/
-  galleryData.ts      # All 99 photos with captions
+  galleryData.ts      # Auto-generated from photo folders
 
 contexts/
   ThemeContext.tsx     # Dark mode context
+
+scripts/
+  generate-gallery.mjs # Scans photo folders → generates galleryData.ts
 
 cdk/                  # AWS CDK infrastructure
   lib/wedding-portfolio-stack.ts
   bin/app.ts
 
-public/images/ashirwad/  # 99 ceremony photos
+public/images/        # Photo folders (see "Adding & Removing Photos")
 ```
 
 ## Gallery Sections
@@ -96,6 +139,7 @@ public/images/ashirwad/  # 99 ceremony photos
 | Rituparna & Shoumo | 23 | Couple portraits and garland exchange |
 | The Signing | 17 | Document signing and formalities |
 | Family & Loved Ones | 17 | Group photos and family portraits |
+| Rituparna | 4 | Portrait photos |
 | The Feast | 7 | Terrace dining and celebration meals |
 
 ## Deployment
