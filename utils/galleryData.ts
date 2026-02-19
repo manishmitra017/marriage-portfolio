@@ -8,8 +8,8 @@
 import { GalleryPhoto } from '@/components/PhotoGallery';
 
 export const preWeddingGalleryPhotos: GalleryPhoto[] = [
-  { src: '/images/pre-wedding/prewedding_01.jpg', alt: 'Wide view of an ornate heritage haveli corridor with arched doorways and warm light', caption: 'Where the story begins — a corridor of anticipation' },
   { src: '/images/pre-wedding/prewedding_02.jpg', alt: 'Rituparna and Shoumo in an antique room with warm amber tones and vintage furniture', caption: 'Amber light, timeless grace' },
+  { src: '/images/pre-wedding/prewedding_01.jpg', alt: 'Wide view of an ornate heritage haveli corridor with arched doorways and warm light', caption: 'Where the story begins — a corridor of anticipation' },
   { src: '/images/pre-wedding/prewedding_03.jpg', alt: 'Rituparna adjusting her hair in a mirror reflection, a candid moment of preparation', caption: 'A quiet moment before the world rushes in' },
   { src: '/images/pre-wedding/prewedding_04.jpg', alt: 'Portrait of Rituparna and Shoumo framed by green-shuttered windows of the haveli', caption: 'Framed by heritage, coloured by love' },
   { src: '/images/pre-wedding/prewedding_05.jpg', alt: 'Shoumo kneeling in the haveli corridor in a chivalrous, cinematic pose', caption: 'A promise whispered in the corridor of time' },
