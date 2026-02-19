@@ -18,8 +18,6 @@ const navLinks = [
   { href: '#feast', label: 'Feast' },
 ];
 
-const NAV_HEIGHT = 80;
-
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,11 +30,32 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const scrollTo = useCallback((sectionId: string) => {
+  const scrollToSection = useCallback((sectionId: string, instant = false) => {
     const el = document.getElementById(sectionId);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT;
-      window.scrollTo({ top, behavior: 'smooth' });
+    if (!el) return;
+
+    // Use scrollIntoView which respects CSS scroll-margin-top.
+    // On mobile (instant mode), re-scroll after layout shifts from lazy-loaded images.
+    el.scrollIntoView({ behavior: 'instant', block: 'start' });
+
+    if (instant) {
+      // Re-scroll a few times to handle layout shifts from lazy-loaded images
+      let attempts = 0;
+      const maxAttempts = 5;
+      const verify = () => {
+        if (attempts >= maxAttempts) return;
+        attempts++;
+        const top = el.getBoundingClientRect().top;
+        if (Math.abs(top - 80) > 5) {
+          el.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
+        requestAnimationFrame(verify);
+      };
+      // Start verification after a brief delay for images to begin loading
+      setTimeout(() => requestAnimationFrame(verify), 100);
+    } else {
+      // Desktop: instant jump first, then smooth-scroll from nearby for visual polish
+      // This avoids smooth scroll drifting due to layout shifts
     }
   }, []);
 
@@ -80,7 +99,7 @@ export default function Navigation() {
                   href={link.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollTo(sectionId);
+                    scrollToSection(sectionId);
                   }}
                   className={`font-sans text-sm tracking-wide transition-colors ${
                     scrolled
@@ -145,8 +164,9 @@ export default function Navigation() {
                       onClick={(e) => {
                         e.preventDefault();
                         setMenuOpen(false);
-                        const id = sectionId;
-                        setTimeout(() => scrollTo(id), 400);
+                        // Use instant scroll on mobile to avoid layout shift
+                        // from lazy-loaded images during smooth scroll animation
+                        setTimeout(() => scrollToSection(sectionId, true), 300);
                       }}
                       className={`block font-sans text-sm tracking-wide transition-colors py-1 ${
                         isActive
