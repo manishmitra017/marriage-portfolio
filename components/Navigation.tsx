@@ -45,11 +45,6 @@ export default function Navigation() {
         {/* Logo / monogram */}
         <a
           href="#home"
-          onClick={(e) => {
-            e.preventDefault();
-            const el = document.getElementById('home');
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }}
           className={`font-script text-2xl transition-colors ${
             scrolled
               ? 'text-blush-600 dark:text-blush-300 hover:text-blush-700'
@@ -69,13 +64,6 @@ export default function Navigation() {
               <li key={link.href} className="relative">
                 <a
                   href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const el = document.getElementById(sectionId);
-                    if (el) {
-                      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                  }}
                   className={`font-sans text-sm tracking-wide transition-colors ${
                     scrolled
                       ? isActive
@@ -136,16 +124,7 @@ export default function Navigation() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setMenuOpen(false);
-                        setTimeout(() => {
-                          const el = document.getElementById(sectionId);
-                          if (el) {
-                            el.scrollIntoView({ behavior: 'smooth' });
-                          }
-                        }, 350);
-                      }}
+                      onClick={() => setMenuOpen(false)}
                       className={`block font-sans text-sm tracking-wide transition-colors py-1 ${
                         isActive
                           ? 'text-blush-600 dark:text-blush-300 font-medium'
