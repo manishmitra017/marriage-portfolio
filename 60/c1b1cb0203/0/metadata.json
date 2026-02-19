@@ -1,0 +1,33 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "60c1b1cb0203",
+  "session_id": "7fc8b901-9531-4b07-9ac1-895b64a37779",
+  "strategy": "manual-commit",
+  "created_at": "2026-02-19T03:08:10.348151Z",
+  "branch": "fix/hero-image-and-design-polish",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "app/globals.css",
+    "components/GallerySection.tsx",
+    "components/Hero.tsx",
+    "components/PhotoGallery.tsx"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "6674e681-df33-46ad-aa51-24b5c46cd821",
+  "token_usage": {
+    "input_tokens": 19,
+    "cache_creation_tokens": 77139,
+    "cache_read_tokens": 1075186,
+    "output_tokens": 1435,
+    "api_call_count": 17
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-02-19T03:08:10.089729Z",
+    "agent_lines": 11,
+    "human_added": 453,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 464,
+    "agent_percentage": 2.3706896551724137
+  }
+}
