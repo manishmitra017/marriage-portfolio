@@ -18,6 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset for fixed navbar when scrolling to sections */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

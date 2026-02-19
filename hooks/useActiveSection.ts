@@ -9,6 +9,7 @@ const SECTION_IDS = [
   'couple',
   'signing',
   'family',
+  'portraits',
   'feast',
 ];
 
