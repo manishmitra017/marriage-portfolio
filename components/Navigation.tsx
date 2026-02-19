@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -18,6 +18,8 @@ const navLinks = [
   { href: '#feast', label: 'Feast' },
 ];
 
+const NAV_HEIGHT = 80;
+
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,6 +30,14 @@ export default function Navigation() {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollTo = useCallback((sectionId: string) => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
   }, []);
 
   return (
@@ -45,6 +55,10 @@ export default function Navigation() {
         {/* Logo / monogram */}
         <a
           href="#home"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
           className={`font-script text-2xl transition-colors ${
             scrolled
               ? 'text-blush-600 dark:text-blush-300 hover:text-blush-700'
@@ -64,6 +78,10 @@ export default function Navigation() {
               <li key={link.href} className="relative">
                 <a
                   href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollTo(sectionId);
+                  }}
                   className={`font-sans text-sm tracking-wide transition-colors ${
                     scrolled
                       ? isActive
@@ -124,7 +142,12 @@ export default function Navigation() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      onClick={() => setMenuOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setMenuOpen(false);
+                        const id = sectionId;
+                        setTimeout(() => scrollTo(id), 400);
+                      }}
                       className={`block font-sans text-sm tracking-wide transition-colors py-1 ${
                         isActive
                           ? 'text-blush-600 dark:text-blush-300 font-medium'
