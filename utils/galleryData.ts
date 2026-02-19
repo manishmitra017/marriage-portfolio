@@ -2,10 +2,35 @@
 // To regenerate: node scripts/generate-gallery.mjs
 //
 // To add/remove photos, just add or delete image files from the folders
-// under public/images/ (blessings, couple, signing, family, portraits, feast).
+// under public/images/ (pre-wedding, blessings, couple, signing, family, portraits, feast).
 // Optionally update _captions.json in that folder for alt text and captions.
 
 import { GalleryPhoto } from '@/components/PhotoGallery';
+
+export const preWeddingGalleryPhotos: GalleryPhoto[] = [
+  { src: '/images/pre-wedding/prewedding_01.jpg', alt: 'Wide view of an ornate heritage haveli corridor with arched doorways and warm light', caption: 'Where the story begins — a corridor of anticipation' },
+  { src: '/images/pre-wedding/prewedding_02.jpg', alt: 'Rituparna and Shoumo in an antique room with warm amber tones and vintage furniture', caption: 'Amber light, timeless grace' },
+  { src: '/images/pre-wedding/prewedding_03.jpg', alt: 'Rituparna adjusting her hair in a mirror reflection, a candid moment of preparation', caption: 'A quiet moment before the world rushes in' },
+  { src: '/images/pre-wedding/prewedding_04.jpg', alt: 'Portrait of Rituparna and Shoumo framed by green-shuttered windows of the haveli', caption: 'Framed by heritage, coloured by love' },
+  { src: '/images/pre-wedding/prewedding_05.jpg', alt: 'Shoumo kneeling in the haveli corridor in a chivalrous, cinematic pose', caption: 'A promise whispered in the corridor of time' },
+  { src: '/images/pre-wedding/prewedding_06.jpg', alt: 'Rituparna by an exterior column, tucking her hair with a gentle gesture', caption: 'Grace in the smallest gestures' },
+  { src: '/images/pre-wedding/prewedding_07.jpg', alt: 'Wide shot of Rituparna and Shoumo playfully posing before the grand haveli facade', caption: 'Playful hearts against grand walls' },
+  { src: '/images/pre-wedding/prewedding_08.jpg', alt: 'Wide shot of Rituparna and Shoumo kissing before the haveli facade', caption: 'A kiss sealed in stone and sunlight' },
+  { src: '/images/pre-wedding/prewedding_09.jpg', alt: 'Black and white close-up of Rituparna and Shoumo with foreheads touching tenderly', caption: 'Where words end, foreheads meet' },
+  { src: '/images/pre-wedding/prewedding_10.jpg', alt: 'Dramatic window silhouette of the couple in black and white', caption: 'Light and shadow, love and longing' },
+  { src: '/images/pre-wedding/prewedding_11.jpg', alt: 'Window silhouette of the couple sharing a kiss, black and white', caption: 'A silhouette worth a thousand words' },
+  { src: '/images/pre-wedding/prewedding_12.jpg', alt: 'Black and white close-up of the couple with ethereal backlighting', caption: 'Ethereal — where light dissolves into love' },
+  { src: '/images/pre-wedding/prewedding_13.jpg', alt: 'Wide shot of the opulent palace darbar hall with fairy lights and red drapes', caption: 'The palace awaits — fairy lights and crimson dreams' },
+  { src: '/images/pre-wedding/prewedding_14.jpg', alt: 'Rituparna and Shoumo dancing and twirling joyfully in the palace hall', caption: 'Lost in the music of each other' },
+  { src: '/images/pre-wedding/prewedding_15.jpg', alt: 'Rituparna and Shoumo together on the palace steps with lotus motifs', caption: 'On steps carved with stories of their own' },
+  { src: '/images/pre-wedding/prewedding_16.jpg', alt: 'Detail shot of clasped hands resting on the lotus-carved palace steps', caption: 'Hands that found each other and never let go' },
+  { src: '/images/pre-wedding/prewedding_17.jpg', alt: 'Rituparna and Shoumo walking through a sunlit park, laughing together', caption: 'Sunlit laughter, the simplest kind of magic' },
+  { src: '/images/pre-wedding/prewedding_18.jpg', alt: 'Rituparna and Shoumo sharing a nose kiss in the park surrounded by greenery', caption: 'A stolen moment between the leaves' },
+  { src: '/images/pre-wedding/prewedding_19.jpg', alt: 'Close-up of Rituparna laughing with genuine, radiant joy', caption: 'This laugh — the reason for everything' },
+  { src: '/images/pre-wedding/prewedding_20.jpg', alt: 'Rituparna and Shoumo embracing beneath a canopy of palm trees', caption: 'Shelter found in each other, under a canopy of palms' },
+  { src: '/images/pre-wedding/prewedding_21.jpg', alt: 'Dramatic black and white shot under an ancient tree canopy with sprawling branches', caption: 'Roots run deep — a love story as old as the trees' },
+  { src: '/images/pre-wedding/prewedding_22.jpg', alt: 'Black and white cinematic shot of the couple walking down a tree-lined avenue', caption: 'Walking into forever, one frame at a time' },
+];
 
 export const blessingPhotos: GalleryPhoto[] = [
   { src: '/images/blessings/ashirwad_001.jpg', alt: 'Rituparna seated on the ceremonial carpet receiving ashirwad from an elder', caption: 'শুভ আশীর্বাদ — where it all begins, on the carpet of tradition' },

@@ -10,6 +10,7 @@ import ThemeToggle from './ThemeToggle';
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#our-story', label: 'Our Story' },
+  { href: '#pre-wedding', label: 'Pre-Wedding' },
   { href: '#ashirwad-blessings', label: 'Blessings' },
   { href: '#couple', label: 'Couple' },
   { href: '#signing', label: 'Signing' },

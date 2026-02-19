@@ -35,6 +35,7 @@ const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
 
 // Section config: folder name → export name, display order matches page layout
 const SECTIONS = [
+  { folder: 'pre-wedding', exportName: 'preWeddingGalleryPhotos' },
   { folder: 'blessings', exportName: 'blessingPhotos' },
   { folder: 'couple', exportName: 'couplePhotos' },
   { folder: 'signing', exportName: 'signingPhotos' },
@@ -108,7 +109,7 @@ function generate() {
     '// To regenerate: node scripts/generate-gallery.mjs',
     '//',
     '// To add/remove photos, just add or delete image files from the folders',
-    '// under public/images/ (blessings, couple, signing, family, portraits, feast).',
+    '// under public/images/ (pre-wedding, blessings, couple, signing, family, portraits, feast).',
     '// Optionally update _captions.json in that folder for alt text and captions.',
     '',
     "import { GalleryPhoto } from '@/components/PhotoGallery';",

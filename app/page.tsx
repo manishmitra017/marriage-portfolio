@@ -9,6 +9,7 @@ import ParallaxDivider from '@/components/ParallaxDivider';
 import SaveTheDate from '@/components/SaveTheDate';
 import Footer from '@/components/Footer';
 import {
+  preWeddingGalleryPhotos,
   blessingPhotos,
   couplePhotos,
   signingPhotos,
@@ -28,6 +29,23 @@ export default function Home() {
 
       {/* Our Story timeline */}
       <OurStory />
+
+      {/* Pre-Wedding gallery */}
+      <GallerySection
+        id="pre-wedding"
+        title="Before Forever"
+        subtitle="বিয়ের আগের গল্প — heritage corridors, palace halls, and sunlit parks became the backdrop for a love story unfolding."
+        emoji="📸"
+        photos={preWeddingGalleryPhotos}
+        columns={2}
+        bg="white"
+      />
+
+      <ParallaxDivider
+        imageSrc="/images/pre-wedding/prewedding_11.jpg"
+        quote="Every love story is beautiful, but ours is my favourite."
+        bengaliQuote="প্রতিটি প্রেমের গল্পই সুন্দর, তবে আমাদেরটা আমার সবচেয়ে প্রিয়"
+      />
 
       {/* Ashirwad Blessings gallery */}
       <GallerySection

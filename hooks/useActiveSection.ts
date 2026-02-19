@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 const SECTION_IDS = [
   'home',
   'our-story',
+  'pre-wedding',
   'ashirwad-blessings',
   'couple',
   'signing',
