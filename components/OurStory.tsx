@@ -11,7 +11,7 @@ const milestones = [
     description:
       'Under one roof in Kolkata, two families became one. Elders lined up to place their hands on Rituparna and Shoumo\'s heads — feeding them mishti, tying sacred threads, and whispering prayers that have been passed down for generations. The carpet, the brass thali, the lit diya — every detail carried the weight of tradition and the warmth of unconditional love.',
     icon: '🙏',
-    photo: '/images/ashirwad/ashirwad_001.jpg',
+    photo: '/images/blessings/ashirwad_001.jpg',
   },
   {
     year: 'The Rituals',
@@ -19,7 +19,7 @@ const milestones = [
     description:
       'Seated on the beautifully laid carpet with sacred durba grass and a glowing diya, Rituparna and Shoumo received ashirwad from Babai, Ma, KumKum Ma, Kaki, Meson Mama, and so many more. Each blessing carried decades of love — some whispered, some with tears, all from the heart. This was not just a ceremony; it was a family pouring its soul into two lives joining together.',
     icon: '🪔',
-    photo: '/images/ashirwad/ashirwad_040.jpg',
+    photo: '/images/blessings/ashirwad_040.jpg',
   },
   {
     year: 'The Promise',
@@ -27,7 +27,7 @@ const milestones = [
     description:
       'The room held its breath. Rituparna, resplendent in her purple Banarasi, and Shoumo, handsome in his red kurta, exchanged flower garlands. মালা বদল — the moment when two souls make their promise visible to the world. The house erupted in joy. Smiles, tears, and the sound of দুটি পরিবার becoming one.',
     icon: '💐',
-    photo: '/images/ashirwad/ashirwad_044.jpg',
+    photo: '/images/couple/ashirwad_044.jpg',
   },
   {
     year: 'Coming Soon',

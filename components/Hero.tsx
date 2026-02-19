@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background photo with Ken Burns */}
       <div className="absolute inset-0">
         <Image
-          src="/images/ashirwad/ashirwad_111.jpg"
+          src="/images/couple/ashirwad_111.jpg"
           alt="Rituparna & Shoumo standing together with garlands, beaming with joy"
           fill
           className="object-cover object-top md:object-[center_15%] animate-ken-burns"

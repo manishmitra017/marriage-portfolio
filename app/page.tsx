@@ -41,7 +41,7 @@ export default function Home() {
       />
 
       <ParallaxDivider
-        imageSrc="/images/ashirwad/ashirwad_044.jpg"
+        imageSrc="/images/couple/ashirwad_044.jpg"
         quote="Two souls with but a single thought, two hearts that beat as one."
         bengaliQuote="দুটি মন, একটি ভাবনা"
       />
@@ -58,7 +58,7 @@ export default function Home() {
       />
 
       <ParallaxDivider
-        imageSrc="/images/ashirwad/ashirwad_062.jpg"
+        imageSrc="/images/couple/ashirwad_062.jpg"
         quote="In all the world, there is no heart for me like yours."
         bengaliQuote="সারা পৃথিবীতে তোমার মতো আর কেউ নেই"
         attribution="Maya Angelou"
@@ -76,7 +76,7 @@ export default function Home() {
       />
 
       <ParallaxDivider
-        imageSrc="/images/ashirwad/ashirwad_000.jpg"
+        imageSrc="/images/family/ashirwad_000.jpg"
         quote="Family is not an important thing. It is everything."
         bengaliQuote="পরিবারই সব"
         attribution="Michael J. Fox"
@@ -105,7 +105,7 @@ export default function Home() {
       />
 
       <ParallaxDivider
-        imageSrc="/images/ashirwad/ashirwad_091.jpg"
+        imageSrc="/images/blessings/ashirwad_091.jpg"
         quote="Where there is love, there is life."
         bengaliQuote="যেখানে ভালোবাসা, সেখানেই জীবন"
         attribution="Mahatma Gandhi"
