@@ -13,6 +13,7 @@ import {
   couplePhotos,
   signingPhotos,
   familyPhotos,
+  portraitSectionPhotos,
   feastPhotos,
 } from '@/utils/galleryData';
 
@@ -90,6 +91,17 @@ export default function Home() {
         photos={familyPhotos}
         columns={3}
         bg="cream"
+      />
+
+      {/* Rituparna Portraits */}
+      <GallerySection
+        id="portraits"
+        title="Rituparna"
+        subtitle="রিতুপর্ণা — grace, beauty, and a smile that lights up every room."
+        emoji="✨"
+        photos={portraitSectionPhotos}
+        columns={2}
+        bg="white"
       />
 
       <ParallaxDivider

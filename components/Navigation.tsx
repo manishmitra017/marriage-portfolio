@@ -14,6 +14,7 @@ const navLinks = [
   { href: '#couple', label: 'Couple' },
   { href: '#signing', label: 'Signing' },
   { href: '#family', label: 'Family' },
+  { href: '#portraits', label: 'Portraits' },
   { href: '#feast', label: 'Feast' },
 ];
 
@@ -141,9 +142,9 @@ export default function Navigation() {
                         setTimeout(() => {
                           const el = document.getElementById(sectionId);
                           if (el) {
-                            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            el.scrollIntoView({ behavior: 'smooth' });
                           }
-                        }, 100);
+                        }, 350);
                       }}
                       className={`block font-sans text-sm tracking-wide transition-colors py-1 ${
                         isActive

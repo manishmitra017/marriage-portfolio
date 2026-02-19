@@ -81,13 +81,7 @@ export default function GallerySection({
               className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              {heroPhoto.caption && (
-                <p className="absolute bottom-5 left-6 right-6 font-serif text-sm text-white/90">
-                  {heroPhoto.caption}
-                </p>
-              )}
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.div>
         )}
 
