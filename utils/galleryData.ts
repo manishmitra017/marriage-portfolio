@@ -30,6 +30,10 @@ export const preWeddingGalleryPhotos: GalleryPhoto[] = [
   { src: '/images/pre-wedding/prewedding_20.jpg', alt: 'Rituparna and Shoumo embracing beneath a canopy of palm trees', caption: 'Shelter found in each other, under a canopy of palms' },
   { src: '/images/pre-wedding/prewedding_21.jpg', alt: 'Dramatic black and white shot under an ancient tree canopy with sprawling branches', caption: 'Roots run deep — a love story as old as the trees' },
   { src: '/images/pre-wedding/prewedding_22.jpg', alt: 'Black and white cinematic shot of the couple walking down a tree-lined avenue', caption: 'Walking into forever, one frame at a time' },
+  { src: '/images/pre-wedding/prewedding_23.jpg', alt: 'Black and white shot of Rituparna and Shoumo standing under a grand banyan tree', caption: 'Under the banyan — two souls, one shade' },
+  { src: '/images/pre-wedding/prewedding_24.jpg', alt: 'Shoumo kissing Rituparna\'s forehead tenderly among the trees', caption: 'A forehead kiss worth a thousand promises' },
+  { src: '/images/pre-wedding/prewedding_25.jpg', alt: 'Rituparna and Shoumo walking hand in hand, looking at each other and laughing', caption: 'Hand in hand, step by step — this is how forever begins' },
+  { src: '/images/pre-wedding/prewedding_26.jpg', alt: 'Black and white wide shot of the couple walking through a forest clearing', caption: 'Into the woods, into each other — a love story in monochrome' },
 ];
 
 export const blessingPhotos: GalleryPhoto[] = [
@@ -51,7 +55,7 @@ export const blessingPhotos: GalleryPhoto[] = [
   { src: '/images/blessings/ashirwad_074.jpg', alt: 'Man kneeling as woman in gold offers blessings, Rituparna seated nearby', caption: 'Sweets from the brass thali — every morsel a prayer' },
   { src: '/images/blessings/ashirwad_079.jpg', alt: 'Man in maroon kurta blessing Rituparna with woman in green as witness', caption: 'Dada blesses Rituparna — welcoming her into the family with open arms' },
   { src: '/images/blessings/ashirwad_081.jpg', alt: 'Elderly man in maroon kurta blessing Rituparna seated on the mat', caption: 'Two hands, one prayer — ashirwad from the eldest' },
-  { src: '/images/blessings/ashirwad_085.jpg', alt: 'Man in white kurta placing arm on Rituparna\'s head in blessing', caption: 'Garlands and blessings, woven together like destiny' },
+  { src: '/images/blessings/ashirwad_096.jpg', alt: 'Elder man in maroon kurta and younger man in black standing together during the celebration', caption: 'প্রজন্ম থেকে প্রজন্ম — standing tall together, across generations' },
   { src: '/images/blessings/ashirwad_087.jpg', alt: 'Woman in white clothing bending to bless Rituparna on the prayer mat', caption: 'প্রণাম — touching feet, touching hearts' },
   { src: '/images/blessings/ashirwad_091.jpg', alt: 'Elder in white giving blessings to Shoumo on the prayer mat', caption: 'আশীর্বাদের ধারা — the stream of blessings continues unbroken' },
   { src: '/images/blessings/ashirwad_093.jpg', alt: 'Man in white receiving blessings from woman and Shoumo during ceremony', caption: 'KumKum Ma blesses her daughter — eyes full of pride, heart full of love' },
@@ -61,13 +65,15 @@ export const blessingPhotos: GalleryPhoto[] = [
   { src: '/images/blessings/ashirwad_112.jpg', alt: 'Shoumo\'s family exchanging blessings with gifts and brass items', caption: 'রক্ষাসূত্র — the sacred thread that binds blessings to the wrist' },
   { src: '/images/blessings/ashirwad_129.jpg', alt: 'Woman giving blessings to Shoumo seated on the prayer mat', caption: 'Meson Mama\'s blessings — loud in love, gentle in touch' },
   { src: '/images/blessings/ashirwad_138.jpg', alt: 'Elder woman in turquoise tenderly blessing Rituparna on the floor', caption: 'She blesses Rituparna the way only a grandmother can — with her whole soul' },
-  { src: '/images/blessings/ashirwad_166.jpg', alt: 'Elder woman in red and gold sari giving blessing with ceremonial items', caption: 'ঠাকুমার আশীর্বাদ — when grandmother blesses, even the heavens listen' },
+  { src: '/images/blessings/ashirwad_147.jpg', alt: 'Shoumo and Rituparna in a playful moment as someone records on phone', caption: 'Peace, love, and a little mischief — that\'s them!' },
   { src: '/images/blessings/ashirwad_180.jpg', alt: 'Elder man in maroon blessing Shoumo on the decorative mat', caption: 'From the hands of elders, every morsel is a memory' },
-  { src: '/images/blessings/ashirwad_194.jpg', alt: 'Shoumo placing a flower garland on Rituparna\'s head as she smiles', caption: 'ফুলের মালা, ভালোবাসার মালা — garlanded with love' },
+  { src: '/images/blessings/ashirwad_249.jpg', alt: 'Rituparna and Shoumo reviewing documents together on the couch', caption: 'A quiet pause in the celebration — every moment matters' },
   { src: '/images/blessings/ashirwad_207.jpg', alt: 'Elder woman and man performing blessing ritual with Shoumo kneeling', caption: 'A gentle touch, a world of wishes' },
   { src: '/images/blessings/ashirwad_226.jpg', alt: 'Elder man in white blessing Rituparna seated on the prayer mat', caption: 'Blessings in every gesture — bold, warm, and unforgettable' },
   { src: '/images/blessings/ashirwad_230.jpg', alt: 'Elder man bending to bless Rituparna with family standing nearby', caption: 'The women of the family — the pillars of every blessing' },
-  { src: '/images/blessings/ashirwad_260.jpg', alt: 'Elder woman in orange blessing Shoumo with a hand gesture', caption: 'Another garland, another prayer answered' },
+  { src: '/images/blessings/ashirwad_254.jpg', alt: 'Elder man placing hand on Rituparna\'s head in blessing on the prayer mat', caption: 'মাথায় হাত — a hand on her head, a lifetime of protection' },
+  { src: '/images/blessings/ashirwad_014.jpg', alt: 'Rituparna bowing at an elder woman\'s feet on the prayer mat during ashirwad', caption: 'প্রণাম — the deepest respect, offered at her feet' },
+  { src: '/images/blessings/ashirwad_122.jpg', alt: 'Rituparna smiling warmly in her purple Banarasi seated on the prayer mat', caption: 'রিতুপর্ণা — a smile that lights up the whole room' },
 ];
 
 export const couplePhotos: GalleryPhoto[] = [
@@ -76,7 +82,6 @@ export const couplePhotos: GalleryPhoto[] = [
   { src: '/images/couple/ashirwad_062.jpg', alt: 'Rituparna and Shoumo laughing together with garlands by the staircase', caption: 'By the staircase — standing tall, hearts intertwined' },
   { src: '/images/couple/ashirwad_076.jpg', alt: 'Rituparna in purple Banarasi and Shoumo in red kurta wearing matching garlands', caption: 'Garlanded and glowing — this is what love looks like' },
   { src: '/images/couple/ashirwad_083.jpg', alt: 'Rituparna and Shoumo in a formal portrait together in their wedding attire', caption: 'A portrait for the ages — purple meets red, grace meets warmth' },
-  { src: '/images/couple/ashirwad_086.jpg', alt: 'Rituparna and Shoumo smiling at each other, wearing garlands', caption: 'That look — when the whole world fades and only you remain' },
   { src: '/images/couple/ashirwad_089.jpg', alt: 'Rituparna\'s radiant smile captured candidly at the celebration', caption: 'That smile could light up all of Kolkata' },
   { src: '/images/couple/ashirwad_098.jpg', alt: 'Shoumo smiling in his red kurta, surrounded by family at the celebration', caption: 'শৌমো — handsome, happy, and ready for forever' },
   { src: '/images/couple/ashirwad_102.jpg', alt: 'Rituparna and Shoumo exchanging flower garlands with an elder woman assisting', caption: 'মালা বদল — the moment two souls make their promise visible' },
@@ -86,18 +91,15 @@ export const couplePhotos: GalleryPhoto[] = [
   { src: '/images/couple/ashirwad_134.jpg', alt: 'Rituparna and Shoumo seated together wearing garlands, joyful moment', caption: 'Seated in bliss, wrapped in garlands and গল্প' },
   { src: '/images/couple/ashirwad_142.jpg', alt: 'Rituparna and Shoumo with matching flower garlands, smiling directly at camera', caption: 'Close enough to see forever in each other\'s eyes' },
   { src: '/images/couple/ashirwad_145.jpg', alt: 'Rituparna tenderly touching Shoumo\'s forehead, both wearing garlands', caption: 'The gentlest blessing — from one heart to another' },
-  { src: '/images/couple/ashirwad_147.jpg', alt: 'Shoumo and Rituparna in a playful moment as someone records on phone', caption: 'Peace, love, and a little mischief — that\'s them!' },
   { src: '/images/couple/ashirwad_148.jpg', alt: 'Rituparna and Shoumo smiling happily together at the celebration venue', caption: 'That smile after মালা বদল — pure, unfiltered joy' },
   { src: '/images/couple/ashirwad_151.jpg', alt: 'Close-up of Rituparna and Shoumo smiling, bride in purple and groom in red', caption: 'Two people, one heartbeat — দুটি প্রাণ, একটি ধড়কানি' },
   { src: '/images/couple/ashirwad_169.jpg', alt: 'Rituparna and Shoumo holding flower garlands together, smiling indoors', caption: 'Peace signs and garlands — because love should always be this fun' },
-  { src: '/images/couple/ashirwad_179.jpg', alt: 'Rituparna sitting gracefully in her orange and purple Banarasi on the couch', caption: 'বেনারসী-তে রিতুপর্ণা — a vision in purple and gold' },
   { src: '/images/couple/ashirwad_202.jpg', alt: 'Rituparna and Shoumo seated together wearing garlands, smiling at camera', caption: 'Surrounded by love and লোকজন — the warmest company' },
   { src: '/images/couple/ashirwad_247.jpg', alt: 'Rituparna in her purple Banarasi with flower decorations in her hair, portrait', caption: 'রিতুপর্ণা — stunning, graceful, and absolutely herself' },
-  { src: '/images/couple/ashirwad_015.jpg', alt: 'Rituparna sitting gracefully in her purple Banarasi on orange cushions', caption: 'রিতুপর্ণা — radiant in purple, beautiful in every way' },
 ];
 
 export const signingPhotos: GalleryPhoto[] = [
-  { src: '/images/signing/ashirwad_012.jpg', alt: 'Shoumo signing documents on the couch with Rituparna beside him', caption: 'কলম হাতে শৌমো — making it official, one signature at a time' },
+  { src: '/images/signing/ashirwad_085.jpg', alt: 'Man in white kurta placing arm on Rituparna\'s head in blessing', caption: 'Garlands and blessings, woven together like destiny' },
   { src: '/images/signing/ashirwad_005.jpg', alt: 'Rituparna and Shoumo reviewing documents together on the couch', caption: 'Reading their future together — one page at a time' },
   { src: '/images/signing/ashirwad_011.jpg', alt: 'The couple in a quiet moment over paperwork between rituals', caption: 'Between all the rituals, a quiet moment just for them' },
   { src: '/images/signing/ashirwad_022.jpg', alt: 'Woman in red sari reviewing and signing ceremony documents', caption: 'Babai signs — steady hand, proud heart' },
@@ -113,7 +115,12 @@ export const signingPhotos: GalleryPhoto[] = [
   { src: '/images/signing/ashirwad_127.jpg', alt: 'Rituparna and Shoumo casually signing documents on the couch', caption: 'Signing the next chapter — ink and intentions' },
   { src: '/images/signing/ashirwad_155.jpg', alt: 'Rituparna and Shoumo reviewing documents together on the blue couch', caption: 'Under the canopy of celebrations' },
   { src: '/images/signing/ashirwad_160.jpg', alt: 'Elder man in white reviewing ceremony papers with Shoumo', caption: 'Reading every word — because promises deserve attention' },
-  { src: '/images/signing/ashirwad_249.jpg', alt: 'Rituparna and Shoumo reviewing documents together on the couch', caption: 'Shoumo signs another page of their forever story' },
+  { src: '/images/signing/ashirwad_086.jpg', alt: 'Rituparna and Shoumo smiling at each other, wearing garlands', caption: 'That look — when the whole world fades and only you remain' },
+  { src: '/images/signing/ashirwad_132.jpg', alt: 'Rituparna and Shoumo at the dining table with other guests', caption: 'বিরিয়ানি আর হাসি — biryani and laughter, the Bengali combo' },
+  { src: '/images/signing/ashirwad_135.jpg', alt: 'Rituparna and Shoumo at the dining table during the wedding feast', caption: 'জলখাবারের টেবিল — refreshments that say "you are loved"' },
+  { src: '/images/signing/ashirwad_166.jpg', alt: 'Elder woman in red and gold sari giving blessing with ceremonial items', caption: 'ঠাকুমার আশীর্বাদ — when grandmother blesses, even the heavens listen' },
+  { src: '/images/signing/ashirwad_194.jpg', alt: 'Shoumo placing a flower garland on Rituparna\'s head as she smiles', caption: 'ফুলের মালা, ভালোবাসার মালা — garlanded with love' },
+  { src: '/images/signing/ashirwad_260.jpg', alt: 'Elder woman in orange blessing Shoumo with a hand gesture', caption: 'Another garland, another prayer answered' },
 ];
 
 export const familyPhotos: GalleryPhoto[] = [
@@ -144,13 +151,8 @@ export const portraitSectionPhotos: GalleryPhoto[] = [
 ];
 
 export const feastPhotos: GalleryPhoto[] = [
-  { src: '/images/feast/ashirwad_090.jpg', alt: 'Antara, Kaki, Biyas, Bhai Kaku, and Rushi enjoying a meal under the orange tent', caption: 'ছাদে বিরিয়ানি — Antara, Kaki, Biyas, Bhai Kaku & Rushi feasting under the sky' },
   { src: '/images/feast/ashirwad_018.jpg', alt: 'Family members gathered under a yellow tent eating together', caption: 'পরিবারের সাথে খাওয়া — nothing beats a meal with family' },
   { src: '/images/feast/ashirwad_080.jpg', alt: 'Family eating together on the terrace during the celebration', caption: 'ছাদে খাওয়া-দাওয়া — terrace meals are the best meals' },
-  { src: '/images/feast/ashirwad_132.jpg', alt: 'Rituparna and Shoumo at the dining table with other guests', caption: 'বিরিয়ানি আর হাসি — biryani and laughter, the Bengali combo' },
-  { src: '/images/feast/ashirwad_135.jpg', alt: 'Rituparna and Shoumo at the dining table during the wedding feast', caption: 'জলখাবারের টেবিল — refreshments that say "you are loved"' },
-  { src: '/images/feast/ashirwad_165.jpg', alt: 'Family members sitting at a white table eating under the orange tent', caption: 'The whole বড় পরিবার — big family, bigger appetites' },
-  { src: '/images/feast/ashirwad_229.jpg', alt: 'Women seated together eating under the tent at the celebration', caption: 'খাওয়া-দাওয়া আর আড্ডা — good food, great company, the best memories' },
 ];
 
 // Legacy exports for backward compatibility
