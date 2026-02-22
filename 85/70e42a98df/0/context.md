@@ -1,0 +1,12 @@
+# Session Context
+
+## User Prompts
+
+### Prompt 1
+
+I have arrnaged some photos , can you ensure 
+
+1. Create a new commit with the changes
+2. Ensure nothing breaks ( I think you need to add some stories around it)
+3. Any other thing if you think we must imporvise
+

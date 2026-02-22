@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.4.5",
+  "checkpoint_id": "8570e42a98df",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "public/images/couple/ashirwad_015.jpg",
+    "public/images/couple/ashirwad_179.jpg",
+    "public/images/feast/ashirwad_090.jpg",
+    "public/images/feast/ashirwad_165.jpg",
+    "public/images/feast/ashirwad_229.jpg",
+    "public/images/pre-wedding/unused/TWM04511 copy.jpg",
+    "public/images/signing/ashirwad_012.jpg"
+  ],
+  "sessions": [
+    {
+      "metadata": "/85/70e42a98df/0/metadata.json",
+      "transcript": "/85/70e42a98df/0/full.jsonl",
+      "context": "/85/70e42a98df/0/context.md",
+      "content_hash": "/85/70e42a98df/0/content_hash.txt",
+      "prompt": "/85/70e42a98df/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 526,
+    "cache_creation_tokens": 89425,
+    "cache_read_tokens": 2356895,
+    "output_tokens": 4217,
+    "api_call_count": 32
+  }
+}
