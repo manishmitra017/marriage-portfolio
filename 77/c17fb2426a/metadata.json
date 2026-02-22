@@ -1,0 +1,28 @@
+{
+  "cli_version": "0.4.5",
+  "checkpoint_id": "77c17fb2426a",
+  "strategy": "manual-commit",
+  "branch": "fix/remove-couple-photo",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "public/images/couple/_captions.json",
+    "public/images/couple/ashirwad_078.jpg",
+    "utils/galleryData.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/77/c17fb2426a/0/metadata.json",
+      "transcript": "/77/c17fb2426a/0/full.jsonl",
+      "context": "/77/c17fb2426a/0/context.md",
+      "content_hash": "/77/c17fb2426a/0/content_hash.txt",
+      "prompt": "/77/c17fb2426a/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 543,
+    "cache_creation_tokens": 183973,
+    "cache_read_tokens": 3455661,
+    "output_tokens": 4972,
+    "api_call_count": 45
+  }
+}
