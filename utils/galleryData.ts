@@ -77,7 +77,6 @@ export const blessingPhotos: GalleryPhoto[] = [
 ];
 
 export const couplePhotos: GalleryPhoto[] = [
-  { src: '/images/couple/ashirwad_078.jpg', alt: 'Rituparna and Shoumo wearing flower garlands, smiling together near a window', caption: 'যুগলবন্দী — a portrait of two souls in perfect harmony' },
   { src: '/images/couple/ashirwad_044.jpg', alt: 'Rituparna and Shoumo standing together after exchanging garlands', caption: 'মালাবদল — the garlands exchanged, two hearts now one' },
   { src: '/images/couple/ashirwad_062.jpg', alt: 'Rituparna and Shoumo laughing together with garlands by the staircase', caption: 'By the staircase — standing tall, hearts intertwined' },
   { src: '/images/couple/ashirwad_076.jpg', alt: 'Rituparna in purple Banarasi and Shoumo in red kurta wearing matching garlands', caption: 'Garlanded and glowing — this is what love looks like' },
