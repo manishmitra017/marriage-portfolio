@@ -11,10 +11,6 @@ import ThemeToggle from './ThemeToggle';
 const desktopNavLinks = [
   { href: '#home', label: 'Home' },
   { href: '#our-story', label: 'Our Story' },
-  { href: '#pre-wedding', label: 'Pre-Wedding' },
-  { href: '#ashirwad-blessings', label: 'Blessings' },
-  { href: '#haldi', label: 'Haldi' },
-  { href: '#wedding', label: 'Wedding' },
 ];
 
 // Mobile menu shows all sections
