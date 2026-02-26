@@ -17,6 +17,7 @@ const SECTION_IDS = [
   'wedding',
   'sindoor-daan',
   'post-wedding',
+  'videos',
 ];
 
 export function useActiveSection(): string {

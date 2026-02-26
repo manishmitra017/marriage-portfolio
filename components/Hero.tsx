@@ -82,12 +82,12 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#ashirwad-blessings"
+            href="#pre-wedding"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('ashirwad-blessings')?.scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('pre-wedding')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white border border-white/30 rounded-full font-sans text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30 hover:border-white/50 rounded-full font-sans text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             <FiCamera size={16} />
             View Gallery
@@ -98,8 +98,9 @@ export default function Hero() {
               e.preventDefault();
               document.getElementById('our-story')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-8 py-3.5 text-white/70 hover:text-white rounded-full font-sans text-sm tracking-wide transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white/80 hover:text-white border border-white/20 hover:border-white/40 rounded-full font-sans text-sm tracking-wide transition-all duration-300"
           >
+            <FiHeart size={14} />
             Our Story
           </a>
         </motion.div>

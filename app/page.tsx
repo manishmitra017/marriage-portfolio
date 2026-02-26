@@ -6,9 +6,14 @@ import Hero from '@/components/Hero';
 import OurStory from '@/components/OurStory';
 import GallerySection from '@/components/GallerySection';
 import ParallaxDivider from '@/components/ParallaxDivider';
+import VideoSection from '@/components/VideoSection';
 import SaveTheDate from '@/components/SaveTheDate';
 import Footer from '@/components/Footer';
 import SectionNav from '@/components/SectionNav';
+
+const weddingVideos = [
+  { src: '/images/videos/WhatsApp Video 2026-02-26 at 11.56.53.mp4', title: 'Wedding highlights' },
+];
 import {
   preWeddingGalleryPhotos,
   blessingPhotos,
@@ -212,6 +217,16 @@ export default function Home() {
         photos={postWeddingPhotos}
         columns={2}
         bg="cream"
+      />
+
+      {/* Videos */}
+      <VideoSection
+        id="videos"
+        title="Videos"
+        subtitle="চলচ্চিত্র — moments that move, captured in motion."
+        emoji="🎬"
+        videos={weddingVideos}
+        bg="white"
       />
 
       {/* Save the Date */}

@@ -20,6 +20,8 @@ const sections: NavItem[] = [
   { type: 'link', id: 'wedding', label: 'Wedding' },
   { type: 'link', id: 'sindoor-daan', label: 'Sindoor Daan' },
   { type: 'link', id: 'post-wedding', label: 'Post-Wedding' },
+  { type: 'divider' },
+  { type: 'link', id: 'videos', label: 'Videos' },
 ];
 
 export default function SectionNav() {

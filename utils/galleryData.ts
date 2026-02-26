@@ -247,7 +247,6 @@ export const weddingPhotos: GalleryPhoto[] = [
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.51.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.51', caption: '' },
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.56.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.56', caption: '' },
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.58.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.58', caption: '' },
-  { src: '/images/wedding/WhatsApp Video 2026-02-26 at 11.56.53.mp4', alt: 'Wedding video — WhatsApp Video 2026-02-26 at 11.56.53', caption: '', type: 'video' },
 ];
 
 export const sindoorDaanPhotos: GalleryPhoto[] = [
