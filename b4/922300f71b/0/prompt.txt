@@ -1,0 +1,98 @@
+Implement the following plan:
+
+# Plan: Add New Gallery Sections, Mobile "Show More", Video Support & Section Nav
+
+## Context
+The user has added 93 new photos + 1 video across 5 new folders (pre-haldi, haldi, wedding, sindoor-daan, post-wedding). These need to be integrated into the site with:
+- New gallery sections in chronological order
+- Mobile UX improvement (photo limit + "Show More")
+- Desktop section navigation for jumping between sections
+- Video playback support for MP4 files
+
+## Changes
+
+### 1. Update gallery generator to support new folders + videos
+**File:** `scripts/generate-gallery.mjs`
+- Add 5 new sections to SECTIONS array: `pre-haldi`, `haldi`, `wedding`, `sindoor-daan`, `post-wedding`
+- Add `.mp4` to recognized extensions
+- Add a `type: 'video' | 'image'` field to generated gallery items
+- Output a `GalleryMedia` type (extending `GalleryPhoto` with optional `type` field)
+
+### 2. Update GalleryPhoto type to support video
+**File:** `components/PhotoGallery.tsx`
+- Add optional `type?: 'image' | 'video'` to `GalleryPhoto` interface
+- Render video items with a play icon overlay and `<video>` tag instead of `<Image>`
+- In lightbox: use `yet-another-react-lightbox` video plugin OR open video inline
+
+### 3. Add mobile "Show More" to GallerySection
+**File:** `components/GallerySection.tsx`
+- Accept optional `mobileLimit` prop (default 6)
+- On mobile (< 640px), show only `mobileLimit` grid photos + hero
+- Add a "Show More" button that expands to show all
+- Desktop shows all photos as before (no change)
+- Use `useState` for expanded state, Tailwind responsive classes for hide/show
+
+### 4. Add SectionNav component (floating section navigator)
+**New file:** `components/SectionNav.tsx`
+- Desktop: Sticky horizontal bar below main nav (or subtle floating pills)
+- Mobile: Bottom floating pill bar with horizontal scroll
+- Shows section names, highlights current section (reuse `useActiveSection` hook)
+- Smooth scroll on click
+- Only visible after scrolling past the hero
+
+### 5. Add new sections to page in chronological order
+**File:** `app/page.tsx`
+- Import new gallery data exports
+- Add sections in this order after existing ones:
+  1. Pre-Wedding (existing)
+  2. Blessings (existing)
+  3. Couple (existing)
+  4. Signing (existing)
+  5. Family (existing)
+  6. Portraits (existing)
+  7. Feast (existing)
+  8. **Pre-Haldi** (new)
+  9. **Haldi** (new)
+  10. **Wedding** (new)
+  11. **Sindoor Daan** (new)
+  12. **Post-Wedding** (new)
+- Add ParallaxDividers between some new sections
+- Add SectionNav component
+
+### 6. Update Navigation with new section links
+**File:** `components/Navigation.tsx`
+- Add nav links for new sections: Pre-Haldi, Haldi, Wedding, Sindoor Daan, Post-Wedding
+
+### 7. Update galleryData.ts type import
+**File:** `utils/galleryData.ts` (auto-generated, but type import needs update)
+
+## Key Files
+- `scripts/generate-gallery.mjs` — gallery data generator
+- `components/PhotoGallery.tsx` — masonry grid + lightbox
+- `components/GallerySection.tsx` — full section wrapper
+- `components/Navigation.tsx` — top nav with section links
+- `components/SectionNav.tsx` — new floating section navigator
+- `app/page.tsx` — main page layout
+- `utils/galleryData.ts` — auto-generated gallery data
+
+## Verification
+1. Run `node scripts/generate-gallery.mjs` to regenerate gallery data
+2. Run `npm run dev` and verify:
+   - All 5 new sections appear with photos
+   - Video plays inline in wedding section
+   - Mobile: only 6 photos shown per section with "Show More" button
+   - Desktop: all photos visible
+   - Section nav works for jumping between sections
+   - Lightbox works for both old and new sections
+3. Test on mobile viewport in browser dev tools
+
+
+If you need specific details from before exiting plan mode (like exact code snippets, error messages, or content you generated), read the full transcript at: /Users/manishmitra/.claude/projects/-Users-manishmitra-Documents-projects-marriage-portfolio/68ac3e82-9be8-48ec-b49c-d45ff02f9af2.jsonl
+
+---
+
+you created PR?
+
+---
+
+yeah
