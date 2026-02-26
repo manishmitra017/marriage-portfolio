@@ -59,7 +59,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="font-serif text-xl md:text-2xl text-white/90 tracking-wide mb-6 [text-shadow:_0_1px_8px_rgba(0,0,0,0.6)]"
         >
-          A Journey That Began with Ashirwad
+          Married on 25th February 2026
         </motion.p>
 
         {/* Date & Venue */}
@@ -69,7 +69,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-sm font-sans tracking-[0.2em] uppercase text-white/70 mb-14 [text-shadow:_0_1px_6px_rgba(0,0,0,0.5)]"
         >
-          <span>Wedding Coming Soon</span>
+          <span>25 &middot; 02 &middot; 2026</span>
           <span className="hidden sm:block text-champagne-400/60">&#x2726;</span>
           <span>Kolkata</span>
         </motion.div>
