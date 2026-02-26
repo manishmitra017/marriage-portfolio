@@ -7,7 +7,14 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import ThemeToggle from './ThemeToggle';
 
-const navLinks = [
+// Desktop nav shows only top-level links; SectionNav handles gallery sections
+const desktopNavLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#our-story', label: 'Our Story' },
+];
+
+// Mobile menu shows all sections
+const allNavLinks = [
   { href: '#home', label: 'Home' },
   { href: '#our-story', label: 'Our Story' },
   { href: '#pre-wedding', label: 'Pre-Wedding' },
@@ -17,6 +24,11 @@ const navLinks = [
   { href: '#family', label: 'Family' },
   { href: '#portraits', label: 'Portraits' },
   { href: '#feast', label: 'Feast' },
+  { href: '#pre-haldi', label: 'Pre-Haldi' },
+  { href: '#haldi', label: 'Haldi' },
+  { href: '#wedding', label: 'Wedding' },
+  { href: '#sindoor-daan', label: 'Sindoor Daan' },
+  { href: '#post-wedding', label: 'Post-Wedding' },
 ];
 
 export default function Navigation() {
@@ -90,7 +102,7 @@ export default function Navigation() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => {
+          {desktopNavLinks.map((link) => {
             const sectionId = link.href.replace('#', '');
             const isActive = activeSection === sectionId;
 
@@ -154,7 +166,7 @@ export default function Navigation() {
             className="md:hidden bg-ivory/95 dark:bg-[#1a0f14]/95 backdrop-blur-md border-t border-blush-100 dark:border-blush-900"
           >
             <ul className="px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => {
+              {allNavLinks.map((link) => {
                 const sectionId = link.href.replace('#', '');
                 const isActive = activeSection === sectionId;
 

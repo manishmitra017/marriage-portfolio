@@ -32,6 +32,8 @@ const IMAGES_DIR = join(ROOT, 'public', 'images');
 const OUTPUT = join(ROOT, 'utils', 'galleryData.ts');
 
 const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
+const VIDEO_EXTS = new Set(['.mp4', '.mov', '.webm']);
+const MEDIA_EXTS = new Set([...IMAGE_EXTS, ...VIDEO_EXTS]);
 
 // Section config: folder name → export name, display order matches page layout
 const SECTIONS = [
@@ -42,12 +44,17 @@ const SECTIONS = [
   { folder: 'family', exportName: 'familyPhotos' },
   { folder: 'portraits', exportName: 'portraitSectionPhotos' },
   { folder: 'feast', exportName: 'feastPhotos' },
+  { folder: 'pre-haldi', exportName: 'preHaldiPhotos' },
+  { folder: 'haldi', exportName: 'haldiPhotos' },
+  { folder: 'wedding', exportName: 'weddingPhotos' },
+  { folder: 'sindoor-daan', exportName: 'sindoorDaanPhotos' },
+  { folder: 'post-wedding', exportName: 'postWeddingPhotos' },
 ];
 
-function getImageFiles(folderPath) {
+function getMediaFiles(folderPath) {
   if (!existsSync(folderPath)) return [];
   return readdirSync(folderPath).filter(
-    (f) => IMAGE_EXTS.has(extname(f).toLowerCase()) && !f.startsWith('_')
+    (f) => MEDIA_EXTS.has(extname(f).toLowerCase()) && !f.startsWith('_')
   );
 }
 
@@ -72,7 +79,7 @@ function escapeTS(str) {
 
 function buildPhotoArray(folder) {
   const folderPath = join(IMAGES_DIR, folder);
-  const allFiles = getImageFiles(folderPath);
+  const allFiles = getMediaFiles(folderPath);
   const captions = loadCaptions(folderPath);
 
   // Determine display order: _captions.json order first, then remaining files alphabetically
@@ -90,10 +97,14 @@ function buildPhotoArray(folder) {
 
   return ordered.map((filename) => {
     const src = `/images/${folder}/${filename}`;
+    const ext = extname(filename).toLowerCase();
+    const isVideo = VIDEO_EXTS.has(ext);
     const meta = captions?.[filename];
-    const alt = meta?.alt || `${humanize(folder)} photo — ${basename(filename, extname(filename))}`;
+    const alt = meta?.alt || `${humanize(folder)} ${isVideo ? 'video' : 'photo'} — ${basename(filename, ext)}`;
     const caption = meta?.caption || '';
-    return { src, alt, caption };
+    const item = { src, alt, caption };
+    if (isVideo) item.type = 'video';
+    return item;
   });
 }
 
@@ -109,8 +120,7 @@ function generate() {
     '// To regenerate: node scripts/generate-gallery.mjs',
     '//',
     '// To add/remove photos, just add or delete image files from the folders',
-    '// under public/images/ (pre-wedding, blessings, couple, signing, family, portraits, feast).',
-    '// Optionally update _captions.json in that folder for alt text and captions.',
+    '// under public/images/. Optionally update _captions.json in that folder for alt text and captions.',
     '',
     "import { GalleryPhoto } from '@/components/PhotoGallery';",
     '',
@@ -119,7 +129,8 @@ function generate() {
   for (const { exportName, photos } of sections) {
     lines.push(`export const ${exportName}: GalleryPhoto[] = [`);
     for (const p of photos) {
-      lines.push(`  { src: '${escapeTS(p.src)}', alt: '${escapeTS(p.alt)}', caption: '${escapeTS(p.caption)}' },`);
+      const typePart = p.type ? `, type: '${p.type}'` : '';
+      lines.push(`  { src: '${escapeTS(p.src)}', alt: '${escapeTS(p.alt)}', caption: '${escapeTS(p.caption)}'${typePart} },`);
     }
     lines.push('];');
     lines.push('');

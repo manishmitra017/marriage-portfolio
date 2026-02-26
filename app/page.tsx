@@ -6,8 +6,14 @@ import Hero from '@/components/Hero';
 import OurStory from '@/components/OurStory';
 import GallerySection from '@/components/GallerySection';
 import ParallaxDivider from '@/components/ParallaxDivider';
+import VideoSection from '@/components/VideoSection';
 import SaveTheDate from '@/components/SaveTheDate';
 import Footer from '@/components/Footer';
+import SectionNav from '@/components/SectionNav';
+
+const weddingVideos = [
+  { src: '/images/videos/WhatsApp Video 2026-02-26 at 11.56.53.mp4', title: 'Wedding highlights' },
+];
 import {
   preWeddingGalleryPhotos,
   blessingPhotos,
@@ -16,6 +22,11 @@ import {
   familyPhotos,
   portraitSectionPhotos,
   feastPhotos,
+  preHaldiPhotos,
+  haldiPhotos,
+  weddingPhotos,
+  sindoorDaanPhotos,
+  postWeddingPhotos,
 } from '@/utils/galleryData';
 
 export default function Home() {
@@ -23,6 +34,7 @@ export default function Home() {
     <main>
       <ScrollProgress />
       <Navigation />
+      <SectionNav />
 
       {/* Hero / cover */}
       <Hero />
@@ -137,6 +149,83 @@ export default function Home() {
         emoji="🍛"
         photos={feastPhotos}
         columns={2}
+        bg="white"
+      />
+
+      <ParallaxDivider
+        imageSrc="/images/pre-wedding/prewedding_14.jpg"
+        quote="And so the celebration continues..."
+        bengaliQuote="আর এইভাবে উৎসব চলতে থাকে"
+      />
+
+      {/* Pre-Haldi */}
+      <GallerySection
+        id="pre-haldi"
+        title="Pre-Haldi"
+        subtitle="হলুদের আগে — the calm before the turmeric storm, preparations and anticipation."
+        emoji="🌸"
+        photos={preHaldiPhotos}
+        columns={3}
+        bg="cream"
+      />
+
+      {/* Haldi */}
+      <GallerySection
+        id="haldi"
+        title="Haldi"
+        subtitle="গায়ে হলুদ — turmeric, laughter, and the golden glow of blessings."
+        emoji="💛"
+        photos={haldiPhotos}
+        columns={3}
+        bg="white"
+      />
+
+      <ParallaxDivider
+        imageSrc="/images/couple/ashirwad_076.jpg"
+        quote="With every sacred step, two souls become one."
+        bengaliQuote="প্রতিটি পবিত্র পদক্ষেপে, দুটি আত্মা এক হয়"
+      />
+
+      {/* Wedding */}
+      <GallerySection
+        id="wedding"
+        title="The Wedding"
+        subtitle="বিবাহ — the sacred ceremony where two hearts were bound forever."
+        emoji="💍"
+        photos={weddingPhotos}
+        columns={3}
+        bg="cream"
+      />
+
+      {/* Sindoor Daan */}
+      <GallerySection
+        id="sindoor-daan"
+        title="Sindoor Daan"
+        subtitle="সিঁদুর দান — the vermillion mark of eternal togetherness."
+        emoji="🔴"
+        photos={sindoorDaanPhotos}
+        columns={2}
+        bg="white"
+      />
+
+      {/* Post-Wedding */}
+      <GallerySection
+        id="post-wedding"
+        title="Post-Wedding"
+        subtitle="বিয়ের পর — the beginning of forever, captured in the afterglow."
+        emoji="🎉"
+        photos={postWeddingPhotos}
+        columns={2}
+        bg="cream"
+      />
+
+      {/* Videos */}
+      <VideoSection
+        id="videos"
+        title="Videos"
+        subtitle="চলচ্চিত্র — moments that move, captured in motion."
+        emoji="🎬"
+        videos={weddingVideos}
         bg="white"
       />
 

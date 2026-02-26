@@ -23,19 +23,19 @@ export default function SaveTheDate() {
           </div>
 
           <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-blush-400 dark:text-blush-500 mb-4">
-            Save the Date
+            Married
           </p>
 
           <h2 className="font-script text-5xl md:text-7xl text-blush-700 dark:text-blush-300 mb-4">
-            Coming Soon
+            25th February 2026
           </h2>
 
           <p className="font-serif text-base md:text-lg text-[#2d1a24]/55 dark:text-blush-200/55 mb-3 max-w-md mx-auto leading-relaxed">
-            The wedding celebrations are on the horizon. Stay tuned for the next beautiful chapter.
+            From ashirwad to sindoor daan — every moment of our journey, captured in love.
           </p>
 
           <p className="font-serif text-sm text-champagne-600 dark:text-champagne-400/70 mb-8">
-            শুভ বিবাহ — the auspicious union awaits
+            শুভ বিবাহ — the auspicious union, complete
           </p>
 
           {/* Monogram */}

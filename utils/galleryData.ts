@@ -2,8 +2,7 @@
 // To regenerate: node scripts/generate-gallery.mjs
 //
 // To add/remove photos, just add or delete image files from the folders
-// under public/images/ (pre-wedding, blessings, couple, signing, family, portraits, feast).
-// Optionally update _captions.json in that folder for alt text and captions.
+// under public/images/. Optionally update _captions.json in that folder for alt text and captions.
 
 import { GalleryPhoto } from '@/components/PhotoGallery';
 
@@ -152,6 +151,112 @@ export const portraitSectionPhotos: GalleryPhoto[] = [
 export const feastPhotos: GalleryPhoto[] = [
   { src: '/images/feast/ashirwad_018.jpg', alt: 'Family members gathered under a yellow tent eating together', caption: 'পরিবারের সাথে খাওয়া — nothing beats a meal with family' },
   { src: '/images/feast/ashirwad_080.jpg', alt: 'Family eating together on the terrace during the celebration', caption: 'ছাদে খাওয়া-দাওয়া — terrace meals are the best meals' },
+];
+
+export const preHaldiPhotos: GalleryPhoto[] = [
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.02.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.02', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.05.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.05', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.06 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.06 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.07.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.07', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.12.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.12', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.15 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.15 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.15.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.15', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.17 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.17 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.17.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.17', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.18.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.18', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.22 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.22 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.22 (2).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.22 (2)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.22.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.22', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.23 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.23 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.23.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.23', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.24 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.24 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.24.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.24', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.25 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.25 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.25.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.25', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.26 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.26 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.27 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.27 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.27 (2).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.27 (2)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.28.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.28', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.29 (1).jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.29 (1)', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.29.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-25 at 14.38.29', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-26 at 12.00.37.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-26 at 12.00.37', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-26 at 12.00.38.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-26 at 12.00.38', caption: '' },
+  { src: '/images/pre-haldi/WhatsApp Image 2026-02-26 at 12.00.39.jpeg', alt: 'Pre haldi photo — WhatsApp Image 2026-02-26 at 12.00.39', caption: '' },
+];
+
+export const haldiPhotos: GalleryPhoto[] = [
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.06.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.06', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.12.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.12', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.13.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.13', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.24.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.24', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.25 (2).jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.25 (2)', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.26 (1).jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.26 (1)', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.26.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.26', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.27 (2).jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.27 (2)', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.27.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.27', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.28.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.28', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-25 at 14.38.29.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-25 at 14.38.29', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.01.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.01', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.02.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.02', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.03 (1).jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.03 (1)', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.03.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.03', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.05.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.05', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.06.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.06', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.07.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.07', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.08.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.08', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.11.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.11', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.12.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.12', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.13.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.13', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.15 (1).jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.15 (1)', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.15.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.15', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.16.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.16', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.17.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.17', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.19.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.19', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.57.20.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.57.20', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 11.59.54.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 11.59.54', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.04.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.04', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.13.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.13', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.16.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.16', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.19.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.19', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.22.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.22', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.31.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.31', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.33.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.33', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.34.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.34', caption: '' },
+  { src: '/images/haldi/WhatsApp Image 2026-02-26 at 12.00.35.jpeg', alt: 'Haldi photo — WhatsApp Image 2026-02-26 at 12.00.35', caption: '' },
+];
+
+export const weddingPhotos: GalleryPhoto[] = [
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.16 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.16 (1)', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.16.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.16', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.17.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.17', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.18.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.18', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.19.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.19', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.21.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.21', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.22 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.22 (1)', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.22.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.22', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.23 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.23 (1)', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.23.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.23', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.24.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.24', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.25 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.25 (1)', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.25.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.25', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.26.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.26', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.39 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.39 (1)', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.39.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.39', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.40.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.40', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.50.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.50', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.51.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.51', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.56.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.56', caption: '' },
+  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.58.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.58', caption: '' },
+];
+
+export const sindoorDaanPhotos: GalleryPhoto[] = [
+  { src: '/images/sindoor-daan/WhatsApp Image 2026-02-26 at 11.56.41.jpeg', alt: 'Sindoor daan photo — WhatsApp Image 2026-02-26 at 11.56.41', caption: '' },
+  { src: '/images/sindoor-daan/WhatsApp Image 2026-02-26 at 11.56.44.jpeg', alt: 'Sindoor daan photo — WhatsApp Image 2026-02-26 at 11.56.44', caption: '' },
+  { src: '/images/sindoor-daan/WhatsApp Image 2026-02-26 at 11.56.45.jpeg', alt: 'Sindoor daan photo — WhatsApp Image 2026-02-26 at 11.56.45', caption: '' },
+];
+
+export const postWeddingPhotos: GalleryPhoto[] = [
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.24 (1).jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.24 (1)', caption: '' },
 ];
 
 // Legacy exports for backward compatibility

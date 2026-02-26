@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FiHeart } from 'react-icons/fi';
+import { FiHeart, FiChevronDown } from 'react-icons/fi';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import PhotoGallery, { GalleryPhoto } from './PhotoGallery';
@@ -16,6 +16,7 @@ interface GallerySectionProps {
   photos: GalleryPhoto[];
   columns?: 2 | 3 | 4;
   bg?: 'white' | 'cream';
+  mobileLimit?: number;
 }
 
 export default function GallerySection({
@@ -26,8 +27,10 @@ export default function GallerySection({
   photos,
   columns = 3,
   bg = 'cream',
+  mobileLimit = 6,
 }: GallerySectionProps) {
   const [lightboxIndex, setLightboxIndex] = useState(-1);
+  const [mobileExpanded, setMobileExpanded] = useState(false);
 
   const bgClass =
     bg === 'white'
@@ -36,6 +39,10 @@ export default function GallerySection({
 
   const heroPhoto = photos[0];
   const gridPhotos = photos.slice(1);
+
+  // On mobile, limit grid photos (hero is always shown)
+  const mobileGridLimit = Math.max(0, mobileLimit - 1); // -1 for hero
+  const hasMoreOnMobile = gridPhotos.length > mobileGridLimit;
 
   return (
     <section id={id} className={`py-28 md:py-32 px-6 ${bgClass}`}>
@@ -85,13 +92,36 @@ export default function GallerySection({
           </motion.div>
         )}
 
-        {/* Masonry gallery grid — remaining photos */}
-        <PhotoGallery
-          photos={gridPhotos}
-          columns={columns}
-          lightboxPhotos={photos}
-          lightboxOffset={1}
-        />
+        {/* Desktop: show all grid photos */}
+        <div className="hidden sm:block">
+          <PhotoGallery
+            photos={gridPhotos}
+            columns={columns}
+            lightboxPhotos={photos}
+            lightboxOffset={1}
+          />
+        </div>
+
+        {/* Mobile: show limited grid photos with "Show More" */}
+        <div className="sm:hidden">
+          <PhotoGallery
+            photos={mobileExpanded ? gridPhotos : gridPhotos.slice(0, mobileGridLimit)}
+            columns={columns}
+            lightboxPhotos={photos}
+            lightboxOffset={1}
+          />
+          {hasMoreOnMobile && !mobileExpanded && (
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              onClick={() => setMobileExpanded(true)}
+              className="mt-8 mx-auto flex items-center gap-2 px-6 py-3 rounded-full bg-blush-100 dark:bg-blush-900/30 text-blush-700 dark:text-blush-300 font-sans text-sm tracking-wide hover:bg-blush-200 dark:hover:bg-blush-900/50 transition-colors"
+            >
+              Show {gridPhotos.length - mobileGridLimit} more
+              <FiChevronDown size={16} />
+            </motion.button>
+          )}
+        </div>
       </div>
 
       {/* Lightbox for hero photo click */}

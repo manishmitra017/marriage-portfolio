@@ -90,4 +90,11 @@ section[id] {
   .font-script {
     font-family: var(--font-dancing), cursive;
   }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
