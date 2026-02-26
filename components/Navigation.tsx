@@ -17,6 +17,11 @@ const navLinks = [
   { href: '#family', label: 'Family' },
   { href: '#portraits', label: 'Portraits' },
   { href: '#feast', label: 'Feast' },
+  { href: '#pre-haldi', label: 'Pre-Haldi' },
+  { href: '#haldi', label: 'Haldi' },
+  { href: '#wedding', label: 'Wedding' },
+  { href: '#sindoor-daan', label: 'Sindoor Daan' },
+  { href: '#post-wedding', label: 'Post-Wedding' },
 ];
 
 export default function Navigation() {

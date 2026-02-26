@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FiMaximize2 } from 'react-icons/fi';
+import { FiMaximize2, FiPlay } from 'react-icons/fi';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
@@ -13,6 +13,7 @@ export interface GalleryPhoto {
   width?: number;
   height?: number;
   caption?: string;
+  type?: 'image' | 'video';
 }
 
 interface PhotoGalleryProps {
@@ -63,19 +64,37 @@ export default function PhotoGallery({
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.5, delay: (idx % 6) * 0.07, ease: [0.25, 0.1, 0.25, 1.0] }}
             className="break-inside-avoid mb-4 group relative overflow-hidden rounded-2xl cursor-pointer bg-blush-50 dark:bg-[#2d1020] border border-blush-100 dark:border-blush-900/30 shadow-soft hover:shadow-glow transition-shadow duration-300"
-            onClick={() => setLightboxIndex(idx + lightboxOffset)}
+            onClick={() => {
+              if (photo.type === 'video') return; // video handles its own playback
+              setLightboxIndex(idx + lightboxOffset);
+            }}
           >
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              width={800}
-              height={600}
-              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
+            {photo.type === 'video' ? (
+              <video
+                src={photo.src}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-auto object-cover"
+                onClick={(e) => e.stopPropagation()}
+              />
+            ) : (
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            )}
             {/* Hover overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2d1a24]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
-              <FiMaximize2 className="text-white/70 flex-shrink-0" size={14} />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#2d1a24]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 pointer-events-none">
+              {photo.type === 'video' ? (
+                <FiPlay className="text-white/70 flex-shrink-0" size={14} />
+              ) : (
+                <FiMaximize2 className="text-white/70 flex-shrink-0" size={14} />
+              )}
             </div>
           </motion.div>
         ))}

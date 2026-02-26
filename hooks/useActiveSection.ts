@@ -12,6 +12,11 @@ const SECTION_IDS = [
   'family',
   'portraits',
   'feast',
+  'pre-haldi',
+  'haldi',
+  'wedding',
+  'sindoor-daan',
+  'post-wedding',
 ];
 
 export function useActiveSection(): string {
