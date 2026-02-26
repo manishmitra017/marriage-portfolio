@@ -7,7 +7,18 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import ThemeToggle from './ThemeToggle';
 
-const navLinks = [
+// Desktop nav shows only top-level links; SectionNav handles gallery sections
+const desktopNavLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#our-story', label: 'Our Story' },
+  { href: '#pre-wedding', label: 'Pre-Wedding' },
+  { href: '#ashirwad-blessings', label: 'Blessings' },
+  { href: '#haldi', label: 'Haldi' },
+  { href: '#wedding', label: 'Wedding' },
+];
+
+// Mobile menu shows all sections
+const allNavLinks = [
   { href: '#home', label: 'Home' },
   { href: '#our-story', label: 'Our Story' },
   { href: '#pre-wedding', label: 'Pre-Wedding' },
@@ -95,7 +106,7 @@ export default function Navigation() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => {
+          {desktopNavLinks.map((link) => {
             const sectionId = link.href.replace('#', '');
             const isActive = activeSection === sectionId;
 
@@ -159,7 +170,7 @@ export default function Navigation() {
             className="md:hidden bg-ivory/95 dark:bg-[#1a0f14]/95 backdrop-blur-md border-t border-blush-100 dark:border-blush-900"
           >
             <ul className="px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => {
+              {allNavLinks.map((link) => {
                 const sectionId = link.href.replace('#', '');
                 const isActive = activeSection === sectionId;
 
