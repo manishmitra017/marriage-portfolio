@@ -234,19 +234,9 @@ export const weddingPhotos: GalleryPhoto[] = [
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.21.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.21', caption: '' },
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.22 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.22 (1)', caption: '' },
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.22.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.22', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.23 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.23 (1)', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.23.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.23', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.24.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.24', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.25 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.25 (1)', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.25.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.25', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.26.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 01.20.26', caption: '' },
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.39 (1).jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.39 (1)', caption: '' },
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.39.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.39', caption: '' },
   { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.40.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.40', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.50.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.50', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.51.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.51', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.56.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.56', caption: '' },
-  { src: '/images/wedding/WhatsApp Image 2026-02-26 at 11.56.58.jpeg', alt: 'Wedding photo — WhatsApp Image 2026-02-26 at 11.56.58', caption: '' },
 ];
 
 export const sindoorDaanPhotos: GalleryPhoto[] = [
@@ -256,7 +246,17 @@ export const sindoorDaanPhotos: GalleryPhoto[] = [
 ];
 
 export const postWeddingPhotos: GalleryPhoto[] = [
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.23 (1).jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.23 (1)', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.23.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.23', caption: '' },
   { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.24 (1).jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.24 (1)', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.24.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.24', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.25 (1).jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.25 (1)', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.25.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.25', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.26.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 01.20.26', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 11.56.50.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 11.56.50', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 11.56.51.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 11.56.51', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 11.56.56.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 11.56.56', caption: '' },
+  { src: '/images/post-wedding/WhatsApp Image 2026-02-26 at 11.56.58.jpeg', alt: 'Post wedding photo — WhatsApp Image 2026-02-26 at 11.56.58', caption: '' },
 ];
 
 // Legacy exports for backward compatibility
