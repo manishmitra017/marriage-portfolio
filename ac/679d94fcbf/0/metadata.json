@@ -1,0 +1,30 @@
+{
+  "cli_version": "0.4.9",
+  "checkpoint_id": "ac679d94fcbf",
+  "session_id": "6b570f60-8b1d-44fa-bda1-ee218d64683c",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-04T03:22:55.60378Z",
+  "branch": "feat/update-our-story-timeline",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "components/OurStory.tsx"
+  ],
+  "agent": "Claude Code",
+  "turn_id": "7a49552e0829",
+  "token_usage": {
+    "input_tokens": 17,
+    "cache_creation_tokens": 53018,
+    "cache_read_tokens": 781349,
+    "output_tokens": 4454,
+    "api_call_count": 13
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-04T03:22:55.523487Z",
+    "agent_lines": 38,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 38,
+    "agent_percentage": 100
+  }
+}
