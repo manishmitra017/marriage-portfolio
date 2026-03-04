@@ -6,36 +6,60 @@ import { FiHeart } from 'react-icons/fi';
 
 const milestones = [
   {
+    year: 'Before Forever',
+    title: 'প্রাক-বিবাহ',
+    description:
+      'It started in a sun-drenched haveli in Kolkata — Rituparna in flowing elegance, Shoumo in quiet adoration. Between amber corridors and ancient banyan trees, they rehearsed what the heart already knew. Every stolen glance, every burst of laughter, every forehead kiss was a promise waiting to be spoken aloud.',
+    icon: '📸',
+    photo: '/images/pre-wedding/prewedding_02.jpg',
+  },
+  {
     year: 'The Ashirwad',
     title: 'শুভ আশীর্বাদ',
     description:
-      'Under one roof in Kolkata, two families became one. Elders lined up to place their hands on Rituparna and Shoumo\'s heads — feeding them mishti, tying sacred threads, and whispering prayers that have been passed down for generations. The carpet, the brass thali, the lit diya — every detail carried the weight of tradition and the warmth of unconditional love.',
+      'Under one roof in Kolkata, two families became one. Elders lined up to place their hands on Rituparna and Shoumo\'s heads — feeding them mishti, tying sacred threads, and whispering prayers passed down for generations. The carpet, the brass thali, the lit diya — every detail carried the weight of tradition and the warmth of unconditional love.',
     icon: '🙏',
     photo: '/images/blessings/ashirwad_001.jpg',
-  },
-  {
-    year: 'The Rituals',
-    title: 'পবিত্র অনুষ্ঠান',
-    description:
-      'Seated on the beautifully laid carpet with sacred durba grass and a glowing diya, Rituparna and Shoumo received ashirwad from Babai, Ma, KumKum Ma, Kaki, Meson Mama, and so many more. Each blessing carried decades of love — some whispered, some with tears, all from the heart. This was not just a ceremony; it was a family pouring its soul into two lives joining together.',
-    icon: '🪔',
-    photo: '/images/blessings/ashirwad_040.jpg',
   },
   {
     year: 'The Promise',
     title: 'মালাবদল',
     description:
-      'The room held its breath. Rituparna, resplendent in her purple Banarasi, and Shoumo, handsome in his red kurta, exchanged flower garlands. মালা বদল — the moment when two souls make their promise visible to the world. The house erupted in joy. Smiles, tears, and the sound of দুটি পরিবার becoming one.',
+      'The room held its breath. Rituparna, resplendent in her purple Banarasi, and Shoumo, handsome in his red kurta, exchanged flower garlands. মালা বদল — the moment when two souls make their promise visible to the world. The house erupted in joy, smiles, tears, and the sound of দুটি পরিবার becoming one.',
     icon: '💐',
     photo: '/images/couple/ashirwad_044.jpg',
   },
   {
-    year: 'Coming Soon',
+    year: 'The Haldi',
+    title: 'হলুদ',
+    description:
+      'Golden turmeric, golden laughter. Family and friends smeared haldi on the couple\'s faces with the joyful abandon that only love can excuse. The air was thick with music, teasing, and the fragrance of raw turmeric — a centuries-old ritual to bless the couple with radiance and ward off every shadow from their path.',
+    icon: '💛',
+    photo: '/images/pre-haldi/WhatsApp Image 2026-02-25 at 14.38.02.jpeg',
+  },
+  {
+    year: 'The Wedding',
     title: 'শুভ বিবাহ',
     description:
-      'The Ashirwad was the prologue — beautiful, emotional, unforgettable. But the best chapters are still being written. The wedding is on the horizon, and with it, a new beginning. Stay with us for what comes next in Rituparna and Shoumo\'s love story. সবাই আমন্ত্রিত — everyone is invited to witness this next chapter.',
+      'On 25th February 2026, under sacred fire and chanted mantras, Rituparna and Shoumo walked seven circles together — সাত পাক. Each step a vow, each circle a lifetime. With sindoor on her parting and garlands around their necks, the prologue finally became the story. Two families, one bond, forever.',
     icon: '💍',
-    photo: null,
+    photo: '/images/wedding/WhatsApp Image 2026-02-26 at 01.20.16.jpeg',
+  },
+  {
+    year: 'Sindoor Daan',
+    title: 'সিঁদুর দান',
+    description:
+      'The most sacred moment — Shoumo filled Rituparna\'s parting with vermillion. সিঁদুর দান, the seal of a Bengali marriage. In that single gesture, witnessed by gods and family alike, a new chapter was written in red — bold, permanent, and brimming with devotion.',
+    icon: '🔴',
+    photo: '/images/sindoor-daan/WhatsApp Image 2026-02-26 at 11.56.41.jpeg',
+  },
+  {
+    year: 'Ever After',
+    title: 'শুভ যাত্রা',
+    description:
+      'The ceremonies ended, but the celebration never did. Surrounded by the people who made it all possible — parents, siblings, cousins, friends — Rituparna and Shoumo stepped into married life with full hearts and wide smiles. This is not an ending. This is where the real story begins.',
+    icon: '🎉',
+    photo: '/images/post-wedding/WhatsApp Image 2026-02-26 at 01.20.23.jpeg',
   },
 ];
 
@@ -63,7 +87,7 @@ export default function OurStory() {
             Our Story
           </h2>
           <p className="font-serif text-lg md:text-xl text-[#2d1a24]/60 dark:text-blush-200/60 max-w-xl mx-auto leading-relaxed">
-            ভালোবাসার গল্প — a story written in blessings, garlands, and the laughter of family.
+            ভালোবাসার গল্প — from the first photo to the last phera, a love story written in turmeric, vermillion, and the laughter of family.
           </p>
         </motion.div>
 
