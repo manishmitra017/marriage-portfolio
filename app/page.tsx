@@ -27,6 +27,8 @@ import {
   weddingPhotos,
   sindoorDaanPhotos,
   postWeddingPhotos,
+  receptionGalleryPhotos,
+  bhaathKapodPhotos,
 } from '@/utils/galleryData';
 
 export default function Home() {
@@ -208,6 +210,24 @@ export default function Home() {
         bg="white"
       />
 
+      {/* Reception */}
+      <GallerySection
+        id="reception"
+        title="The Reception"
+        subtitle="অভ্যর্থনা — flowers, lights, and a room full of love — the grand celebration of two becoming one."
+        emoji="🌹"
+        photos={receptionGalleryPhotos}
+        columns={3}
+        bg="cream"
+      />
+
+      <ParallaxDivider
+        imageSrc="/images/reception/RAH00064.JPG"
+        quote="The best thing to hold onto in life is each other."
+        bengaliQuote="জীবনে সবচেয়ে ভালো যা আঁকড়ে ধরা যায়, তা হলো একে অপরকে"
+        attribution="Audrey Hepburn"
+      />
+
       {/* Post-Wedding */}
       <GallerySection
         id="post-wedding"
@@ -215,6 +235,23 @@ export default function Home() {
         subtitle="বিয়ের পর — the beginning of forever, captured in the afterglow."
         emoji="🎉"
         photos={postWeddingPhotos}
+        columns={2}
+        bg="white"
+      />
+
+      <ParallaxDivider
+        imageSrc="/images/post-wedding/Bhaath-Kapod-Er-Bhaar/RAH00013.JPG"
+        quote="Home is not a place, it is a person."
+        bengaliQuote="বাড়ি কোনো জায়গা নয়, বাড়ি হলো একজন মানুষ"
+      />
+
+      {/* Bhaath-Kapod Er Bhaar */}
+      <GallerySection
+        id="bhaath-kapod"
+        title="Bhaath-Kapod Er Bhaar"
+        subtitle="ভাত-কাপড়ের ভার — rice, clothes, and blessings — the groom's family welcomes the bride with love and tradition."
+        emoji="🍚"
+        photos={bhaathKapodPhotos}
         columns={2}
         bg="cream"
       />

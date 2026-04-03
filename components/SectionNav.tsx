@@ -19,7 +19,9 @@ const sections: NavItem[] = [
   { type: 'link', id: 'haldi', label: 'Haldi' },
   { type: 'link', id: 'wedding', label: 'Wedding' },
   { type: 'link', id: 'sindoor-daan', label: 'Sindoor Daan' },
+  { type: 'link', id: 'reception', label: 'Reception' },
   { type: 'link', id: 'post-wedding', label: 'Post-Wedding' },
+  { type: 'link', id: 'bhaath-kapod', label: 'Bhaath-Kapod' },
   { type: 'divider' },
   { type: 'link', id: 'videos', label: 'Videos' },
 ];

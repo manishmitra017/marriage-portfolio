@@ -48,7 +48,9 @@ const SECTIONS = [
   { folder: 'haldi', exportName: 'haldiPhotos' },
   { folder: 'wedding', exportName: 'weddingPhotos' },
   { folder: 'sindoor-daan', exportName: 'sindoorDaanPhotos' },
+  { folder: 'reception', exportName: 'receptionGalleryPhotos' },
   { folder: 'post-wedding', exportName: 'postWeddingPhotos' },
+  { folder: 'post-wedding/Bhaath-Kapod-Er-Bhaar', exportName: 'bhaathKapodPhotos' },
 ];
 
 function getMediaFiles(folderPath) {
