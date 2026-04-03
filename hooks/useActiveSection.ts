@@ -16,7 +16,9 @@ const SECTION_IDS = [
   'haldi',
   'wedding',
   'sindoor-daan',
+  'reception',
   'post-wedding',
+  'bhaath-kapod',
   'videos',
 ];
 

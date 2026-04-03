@@ -28,7 +28,9 @@ const allNavLinks = [
   { href: '#haldi', label: 'Haldi' },
   { href: '#wedding', label: 'Wedding' },
   { href: '#sindoor-daan', label: 'Sindoor Daan' },
+  { href: '#reception', label: 'Reception' },
   { href: '#post-wedding', label: 'Post-Wedding' },
+  { href: '#bhaath-kapod', label: 'Bhaath-Kapod' },
 ];
 
 export default function Navigation() {
